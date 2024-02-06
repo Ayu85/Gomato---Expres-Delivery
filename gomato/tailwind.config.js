@@ -7,7 +7,8 @@ module.exports = {
       yellowish: "#F7B614",
       blackish: "#282932",
       ghee: "#F2EFE6",
-      white:"#fff"
+      white: "#fff",
+      gray: '#383941'
     }
   },
   plugins: [],

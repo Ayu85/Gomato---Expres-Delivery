@@ -7,7 +7,7 @@ import { MdNavigateNext } from "react-icons/md";
 
 const Header = () => {
     return (
-        <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg'>
+        <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
             <div>
                 {/* logo box */}
                 <img src={logo} alt='logo' />
