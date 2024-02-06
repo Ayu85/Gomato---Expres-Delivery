@@ -27,8 +27,8 @@ const Hero = () => {
                 {/* right box */}
                 <img src={courier} alt='logo' className={`md:w-[800px] mt-20 translate-x-[1000px] ${showbike && "translate-x-1 transition-all duration-1000"}`} />
             </div>
-            {<div className={`bg-[#04040481] border-gray 
-             backdrop-blur-sm absolute top-0 w-96 h-screen -right-96  transition-all duration-300 ${showHamburger && "right-1 transition-all duration-500"}`}>
+            {<div className={`bg-[#04040481] border-gray lg:hidden
+             backdrop-blur-sm absolute top-0 w-96 h-full -right-96  transition-all duration-300 ${showHamburger && "right-1 transition-all duration-500"}`}>
                 {/* menus box */}
                 <div className='flex justify-between px-10 items-center py-7'>
                     <img src={logo} alt='logo' />
