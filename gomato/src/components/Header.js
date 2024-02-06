@@ -15,15 +15,15 @@ const Header = () => {
             <div>
                 {/* menus box */}
                 <ul className='flex list-none text-white gap-4 '>
-                    <li className='flex items-center '>Home<MdNavigateNext />
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
                     </li>
-                    <li className='flex items-center '>About us<MdNavigateNext />
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
                     </li>
-                    <li className='flex items-center '>Catalog<MdNavigateNext />
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
                     </li>
-                    <li className='flex items-center '>Blog<MdNavigateNext />
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
                     </li>
-                    <li className='flex items-center '>Contacts<MdNavigateNext />
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
                 </ul>
             </div>
