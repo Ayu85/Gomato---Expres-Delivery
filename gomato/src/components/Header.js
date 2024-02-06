@@ -5,8 +5,11 @@ import { FaUserAlt } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 import { MdNavigateNext } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useDispatch, useSelector } from 'react-redux';
 
 const Header = () => {
+    const showHamburger = useSelector(store => store.Hamburger.isShown)
+    const dispatch = useDispatch()
     return (
         <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
             <div>
@@ -37,9 +40,9 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex sm:flex md:flex lg:hidden'>
-                <RxHamburgerMenu className='text-white text-3xl cursor-pointer'/>
+                <RxHamburgerMenu className='text-white text-3xl cursor-pointer' />
             </div>
-        
+
         </div>
     )
 }
