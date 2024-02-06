@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import courier from "../assets/courier-person.png"
+import { MdNavigateNext } from 'react-icons/md';
+import logo from '../assets/darklogo.png'
+import { RxCross1 } from "react-icons/rx";
+
 const Hero = () => {
     const [showbike, setShowbike] = useState(false);
     useEffect(() => {
@@ -19,6 +23,25 @@ const Hero = () => {
             <div className='lg:-mt-10 md:-mt-28 -mt-28 '>
                 {/* right box */}
                 <img src={courier} alt='logo' className={`md:w-[800px] mt-20 translate-x-[1000px] ${showbike && "translate-x-1 transition-all duration-1000"}`} />
+            </div>
+            <div className='bg-white absolute top-0 w-full h-screen'>
+                {/* menus box */}
+                <div className='flex justify-between px-10 items-center py-7'>
+                    <img src={logo} alt='logo' />
+                    <RxCross1 className='text-4xl font-bold'/>
+                </div>
+                <ul className='flex list-none text-blackish text-xl gap-4 '>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
+                    </li>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
+                    </li>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
+                    </li>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
+                    </li>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
+                    </li>
+                </ul>
             </div>
         </div>
     )
