@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from "../assets/logo.png"
 import { PiPhoneCallFill } from "react-icons/pi";
 import { FaUserAlt } from "react-icons/fa";
@@ -9,6 +9,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toogleHamburger } from '../redux/slices/Hamburgerslice';
 
 const Header = () => {
+    const [showHome, setShowhome] = useState(false)
+    const [showAbout, setShowabout] = useState(false)
+    const [showCatalog, setShowcatalog] = useState(false)
+    const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const dispatch = useDispatch()
     return (
@@ -22,16 +26,20 @@ const Header = () => {
                 <ul className='flex list-none text-white gap-4 text-[1.05rem] relative'>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
                     </li>
-                    <div className='absolute top-10 z-30 -left-14 rounded-xl bg-white text-blackish px-5 py-4'>home dropdown</div>
+                    {showHome && <div className='absolute top-10 z-30 -left-14 rounded-xl bg-white text-blackish px-5 py-4'>home dropdown</div>
+                    }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
                     </li>
-                    <div className='absolute top-10 z-30 left-10 rounded-xl bg-white text-blackish px-5 py-4'> About dropdown</div>
+                    {showAbout && <div className='absolute top-10 z-30 left-10 rounded-xl bg-white text-blackish px-5 py-4'> About dropdown</div>
+                    }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
                     </li>
-                    <div className='absolute top-10 z-30 left-32 rounded-xl bg-white text-blackish px-5 py-4'> Cataloge dropdown</div>
+                    {showCatalog && <div className='absolute top-10 z-30 left-32 rounded-xl bg-white text-blackish px-5 py-4'> Cataloge dropdown</div>
+                    }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
                     </li>
-                    <div className='absolute top-10 z-30 left-52 rounded-xl bg-white text-blackish px-5 py-4'> Blog dropdown</div>
+                    {showBlog && <div className='absolute top-10 z-30 left-52 rounded-xl bg-white text-blackish px-5 py-4'> Blog dropdown</div>
+                    }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
                 </ul>
