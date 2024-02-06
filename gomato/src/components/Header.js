@@ -66,7 +66,11 @@ const Header = () => {
                         setShowcatalog(false)
                     }} className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
                     </li>
-                    {showCatalog && <div className='absolute flex flex-col gap-4 text-sm font-semibold   top-9 z-30 left-32 rounded-xl bg-white text-blackish px-14  py-6'>
+                    {showCatalog && <div onMouseEnter={() => {
+                        setShowcatalog(true)
+                    }} onMouseLeave={() => {
+                        setShowcatalog(false)
+                    }} className='absolute flex flex-col cursor-pointer gap-4 text-sm font-semibold   top-9 z-30 left-32 rounded-xl bg-white text-blackish px-14  py-6'>
                         <li>Shop</li>
                         <li>Cart</li>
                         <li>Checkout</li>
