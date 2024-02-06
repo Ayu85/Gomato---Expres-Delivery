@@ -3,8 +3,11 @@ import courier from "../assets/courier-person.png"
 import { MdNavigateNext } from 'react-icons/md';
 import logo from '../assets/darklogo.png'
 import { RxCross1 } from "react-icons/rx";
-
+import { useDispatch, useSelector } from 'react-redux';
+import { toogleHamburger } from '../redux/slices/Hamburgerslice';
 const Hero = () => {
+    const showHamburger = useSelector(store => store.Hamburger.isShown)
+    const dispatch = useDispatch()
     const [showbike, setShowbike] = useState(false);
     useEffect(() => {
         setTimeout(() => {
@@ -24,11 +27,13 @@ const Hero = () => {
                 {/* right box */}
                 <img src={courier} alt='logo' className={`md:w-[800px] mt-20 translate-x-[1000px] ${showbike && "translate-x-1 transition-all duration-1000"}`} />
             </div>
-            <div className='bg-white absolute top-0 w-full h-screen'>
+            {showHamburger && <div className='bg-white absolute top-0 w-full h-screen'>
                 {/* menus box */}
                 <div className='flex justify-between px-10 items-center py-7'>
                     <img src={logo} alt='logo' />
-                    <RxCross1 className='text-4xl font-bold'/>
+                    <RxCross1 className='text-4xl font-bold cursor-pointer' onClick={() => {
+                        dispatch(toogleHamburger())
+                    }} />
                 </div>
                 <ul className='flex list-none text-blackish text-xl gap-4 '>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
@@ -42,7 +47,7 @@ const Hero = () => {
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
                 </ul>
-            </div>
+            </div>}
         </div>
     )
 }
