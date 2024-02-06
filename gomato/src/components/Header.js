@@ -28,8 +28,10 @@ const Header = () => {
                     <div className='absolute top-10 z-30 left-10 rounded-xl bg-white text-blackish px-5 py-4'> About dropdown</div>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
                     </li>
+                    <div className='absolute top-10 z-30 left-32 rounded-xl bg-white text-blackish px-5 py-4'> Cataloge dropdown</div>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
                     </li>
+                    <div className='absolute top-10 z-30 left-52 rounded-xl bg-white text-blackish px-5 py-4'> Blog dropdown</div>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
                 </ul>
