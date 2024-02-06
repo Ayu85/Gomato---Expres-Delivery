@@ -8,7 +8,8 @@ module.exports = {
       blackish: "#282932",
       ghee: "#F2EFE6",
       white: "#fff",
-      gray: '#595959'
+      gray: '#595959',
+      transblack: '#272727',
     }
   },
   plugins: [],

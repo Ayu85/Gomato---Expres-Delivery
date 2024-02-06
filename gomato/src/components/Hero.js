@@ -15,7 +15,7 @@ const Hero = () => {
         }, 700)
     }, [])
     return (
-        <div className='bg-blackish flex flex-wrap pt-20 sm:pt-20 md:pt-28 lg:pt-10 items-center justify-center gap-28 py-5 overflow-x-hidden '>
+        <div className='bg-blackish flex flex-wrap relative pt-20 sm:pt-20 md:pt-28 lg:pt-10 items-center justify-center gap-28 py-5 overflow-x-hidden '>
             <div className='w-96 flex items-center flex-col gap-3 sm:items-center lg:items-start md:items-center'>
                 {/* left box */}
                 <h1 className='lg:text-7xl md:text-7xl text-4xl font-bold text-white'>Express </h1>
@@ -25,9 +25,10 @@ const Hero = () => {
             </div>
             <div className='lg:-mt-10 md:-mt-28 -mt-28 '>
                 {/* right box */}
-                <img src={courier} alt='logo' className={`md:w-[800px] mt-20 translate-x-[1000px] ${showbike && "translate-x-1 transition-all duration-1000"}`} />
+                <img src={courier} alt='logo' className={`md:w-[800px] mt-20 translate-x-[1000px] ${showbike && "translate-x-2 transition-all duration-1000"}`} />
             </div>
-            {showHamburger && <div className='bg-white absolute top-0 w-full h-screen'>
+            {<div className={`bg-[#04040481] border-gray 
+             backdrop-blur-sm absolute top-0 w-96 h-screen -right-96  transition-all duration-300 ${showHamburger && "right-1 transition-all duration-500"}`}>
                 {/* menus box */}
                 <div className='flex justify-between px-10 items-center py-7'>
                     <img src={logo} alt='logo' />
@@ -35,7 +36,7 @@ const Hero = () => {
                         dispatch(toogleHamburger())
                     }} />
                 </div>
-                <ul className='flex list-none text-blackish text-xl gap-4 '>
+                <ul className='flex list-none text-white text-xl gap-4 '>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
                     </li>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />

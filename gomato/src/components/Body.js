@@ -4,7 +4,7 @@ import Hero from './Hero'
 
 const Body = () => {
     return (
-        <div>
+        <div >
             <Header />
             <Hero />
         </div>
