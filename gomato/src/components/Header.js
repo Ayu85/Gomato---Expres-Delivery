@@ -15,12 +15,7 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const dispatch = useDispatch()
-    const handleHome = () => {
-        setShowhome(!showHome)
-    }
-    const handleAbout = () => {
-        setShowabout(!showAbout)
-    }
+   
     return (
         <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
             <div>
@@ -31,28 +26,47 @@ const Header = () => {
                 {/* menus box */}
                 <ul className='flex list-none text-white gap-4 text-[1.05rem] relative'>
                     <li onMouseEnter={() => {
-                        handleHome()
+                        setShowhome(true)
                     }} onMouseLeave={() => {
-                        handleHome()
-                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
+                       setShowhome(false)
+                    }} className='flex items-center cursor-pointer hover:text-yellowish py-1'>Home<MdNavigateNext />
                     </li>
-                    {showHome && <div className='absolute top-10 z-30 -left-14 rounded-xl bg-white text-blackish px-5 py-4'>home dropdown</div>
+                    {showHome && <div onMouseEnter={() => {
+                        setShowhome(true)
+                    }} onMouseLeave={() => {
+                        setShowhome(false)
+                    }} className='absolute list-none flex flex-col gap-4 text-sm font-semibold top-9 cursor-pointer z-30 -left-14 rounded-xl bg-white text-blackish px-14  py-6'>
+                        <li>Food Delivery</li>
+                        <li>Water Delivery</li>
+                        <li>Medical Supplies</li>
+                        <li>Pizza Time</li>
+
+                    </div>
+
                     }
                     <li onMouseEnter={() => {
-                        handleAbout()
+                        setShowabout(true)
                     }} onMouseLeave={() => {
-                        handleAbout()
+                        setShowabout(false)
                     }} className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
                     </li>
-                    {showAbout && <div className='absolute top-10 z-30 left-10 rounded-xl bg-white text-blackish px-5 py-4'> About dropdown</div>
+                    {showAbout && <div className='absolute top-9 z-30 left-10 rounded-xl bg-white text-blackish px-5 py-4'> About dropdown</div>
                     }
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
+                    <li onMouseEnter={() => {
+                        setShowcatalog(true)
+                    }} onMouseLeave={() => {
+                        setShowcatalog(false)
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
                     </li>
-                    {showCatalog && <div className='absolute top-10 z-30 left-32 rounded-xl bg-white text-blackish px-5 py-4'> Cataloge dropdown</div>
+                    {showCatalog && <div className='absolute  top-9 z-30 left-32 rounded-xl bg-white text-blackish px-5 py-4'> Cataloge dropdown</div>
                     }
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
+                    <li onMouseEnter={() => {
+                        setShowblog(true)
+                    }} onMouseLeave={() => {
+                        setShowblog(false)
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
                     </li>
-                    {showBlog && <div className='absolute top-10 z-30 left-52 rounded-xl bg-white text-blackish px-5 py-4'> Blog dropdown</div>
+                    {showBlog && <div className='absolute top-9 z-30 left-52 rounded-xl bg-white text-blackish px-5 py-4'> Blog dropdown</div>
                     }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
