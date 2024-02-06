@@ -6,6 +6,7 @@ import { IoCart } from "react-icons/io5";
 import { MdNavigateNext } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from 'react-redux';
+import { toogleHamburger } from '../redux/slices/Hamburgerslice';
 
 const Header = () => {
     const showHamburger = useSelector(store => store.Hamburger.isShown)
@@ -40,7 +41,9 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex sm:flex md:flex lg:hidden'>
-                <RxHamburgerMenu className='text-white text-3xl cursor-pointer' />
+                <RxHamburgerMenu className='text-white text-3xl cursor-pointer' onClick={() => {
+                    dispatch(toogleHamburger())
+                }} />
             </div>
 
         </div>
