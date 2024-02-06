@@ -35,7 +35,7 @@ const Header = () => {
                         setShowhome(true)
                     }} onMouseLeave={() => {
                         setShowhome(false)
-                    }} className='absolute list-none flex flex-col gap-4 text-sm font-semibold top-9 cursor-pointer z-30 -left-14 rounded-xl bg-white text-blackish px-14  py-6'>
+                    }} className='absolute z-50 list-none flex flex-col gap-4 text-sm font-semibold top-9 cursor-pointer  -left-14 rounded-xl bg-white text-blackish px-14  py-6'>
                         <li>Food Delivery</li>
                         <li>Water Delivery</li>
                         <li>Medical Supplies</li>
@@ -53,7 +53,7 @@ const Header = () => {
                         setShowabout(true)
                     }} onMouseLeave={() => {
                         setShowabout(false)
-                    }} className='absolute text-sm font-semibold gap-4 flex flex-col top-9 z-30 left-10 rounded-xl bg-white text-blackish px-16  py-6'>
+                    }} className='absolute text-sm z-50 font-semibold gap-4 flex flex-col top-9  left-10 rounded-xl bg-white text-blackish px-16  py-6'>
                         <li>Testimonials</li>
                         <li>FAQ's</li>
                         <li>Gallery</li>
@@ -70,7 +70,7 @@ const Header = () => {
                         setShowcatalog(true)
                     }} onMouseLeave={() => {
                         setShowcatalog(false)
-                    }} className='absolute flex flex-col cursor-pointer gap-4 text-sm font-semibold   top-9 z-30 left-32 rounded-xl bg-white text-blackish px-14  py-6'>
+                    }} className='absolute flex flex-col cursor-pointer gap-4 text-sm font-semibold   top-9 z-50 left-32 rounded-xl bg-white text-blackish px-14  py-6'>
                         <li>Shop</li>
                         <li>Cart</li>
                         <li>Checkout</li>
@@ -86,7 +86,7 @@ const Header = () => {
                         setShowblog(true)
                     }} onMouseLeave={() => {
                         setShowblog(false)
-                    }} className='absolute cursor-pointer flex flex-col gap-4 text-sm font-semibold top-9 z-30 left-52 rounded-xl bg-white text-blackish px-14  py-6'>
+                    }} className='absolute cursor-pointer flex flex-col gap-4 text-sm font-semibold top-9 z-50 left-52 rounded-xl bg-white text-blackish px-14  py-6'>
                         <li>Blog With Us</li>
                         <li>Read Blogs</li></div>
                     }
