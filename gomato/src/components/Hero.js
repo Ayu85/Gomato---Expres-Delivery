@@ -9,23 +9,25 @@ const Hero = () => {
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const dispatch = useDispatch()
     const [showbike, setShowbike] = useState(false);
+    const [showHeading, setShowHeading] = useState(false)
     useEffect(() => {
         setTimeout(() => {
             setShowbike(true)
+            setShowHeading(true)
         }, 400)
     }, [])
     return (
         <div className='bg-blackish flex flex-wrap relative pt-20 sm:pt-20 md:pt-28 lg:pt-10 items-center justify-center gap-28 py-5 overflow-x-hidden '>
             <div className='w-96 flex items-center flex-col gap-3 sm:items-center lg:items-start md:items-center'>
                 {/* left box */}
-                <h1 className='lg:text-7xl md:text-7xl text-4xl font-bold text-white'>Express </h1>
-                <h1 className='lg:text-7xl md:text-7xl text-4xl  font-bold text-yellowish w-max'>Home Delivery</h1>
-                <p className='text-white md:text-center sm:text-center lg:text-start'>Curabitur imperdiet varius lacus, id placerat purus vulputate non. Fusce in felis vel arcu maximus placerat eu ut arcu. Ut nunc ex, gravida vel porttitor et, pretium ac sapien.</p>
-                <button className='px-5 sm:mt-10 lg:mt-2 mt-10 py-5 w-60 text-lg font-semibold text-blackish bg-yellowish rounded-full'>Read More</button>
+                <h1 className={`lg:text-7xl md:text-7xl text-4xl font-bold text-white ${!showHeading && '-translate-x-[600px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Express </h1>
+                <h1 className={`lg:text-7xl md:text-7xl text-4xl  font-bold text-yellowish w-max ${!showHeading && '-translate-x-[700px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Home Delivery</h1>
+                <p className={`text-white md:text-center sm:text-center lg:text-start ${!showHeading && '-translate-x-[600px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`} >Curabitur imperdiet varius lacus, id placerat purus vulputate non. Fusce in felis vel arcu maximus placerat eu ut arcu. Ut nunc ex, gravida vel porttitor et, pretium ac sapien.</p>
+                <button className={`px-5 sm:mt-10 lg:mt-2 mt-10 py-5 w-60 text-lg font-semibold text-blackish bg-yellowish rounded-full ${!showHeading && '-translate-x-[600px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Read More</button>
             </div>
             <div className='lg:-mt-10 md:-mt-28 -mt-28 '>
                 {/* right box */}
-                <img src={courier} alt='logo' className={`md:w-[800px] mt-20 translate-x-[1000px] ${showbike && "translate-x-1 transition-all duration-1000"}`} />
+                <img src={courier} alt='logo' className={`md:w-[800px] mt-20 ${!showbike && "translate-x-[1000px] transition-all duration-1000"} ${showbike && "translate-x-[1px] transition-all duration-1000"}`} />
             </div>
             {<div className={`bg-[#04040481] border-gray lg:hidden
              backdrop-blur-sm absolute top-0 w-96 h-full -right-96  transition-all duration-300 ${showHamburger && "right-1 transition-all duration-500"}`}>
