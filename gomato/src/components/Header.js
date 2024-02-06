@@ -15,6 +15,12 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const dispatch = useDispatch()
+    const handleHome = () => {
+        setShowhome(!showHome)
+    }
+    const handleAbout = () => {
+        setShowabout(!showAbout)
+    }
     return (
         <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
             <div>
@@ -24,11 +30,19 @@ const Header = () => {
             <div className='hidden lg:block'>
                 {/* menus box */}
                 <ul className='flex list-none text-white gap-4 text-[1.05rem] relative'>
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
+                    <li onMouseEnter={() => {
+                        handleHome()
+                    }} onMouseLeave={() => {
+                        handleHome()
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
                     </li>
                     {showHome && <div className='absolute top-10 z-30 -left-14 rounded-xl bg-white text-blackish px-5 py-4'>home dropdown</div>
                     }
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
+                    <li onMouseEnter={() => {
+                        handleAbout()
+                    }} onMouseLeave={() => {
+                        handleAbout()
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
                     </li>
                     {showAbout && <div className='absolute top-10 z-30 left-10 rounded-xl bg-white text-blackish px-5 py-4'> About dropdown</div>
                     }
