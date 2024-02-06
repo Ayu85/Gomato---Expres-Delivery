@@ -19,11 +19,13 @@ const Header = () => {
             </div>
             <div className='hidden lg:block'>
                 {/* menus box */}
-                <ul className='flex list-none text-white gap-4 '>
+                <ul className='flex list-none text-white gap-4 text-[1.05rem] relative'>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
                     </li>
+                    <div className='absolute top-10 z-30 -left-14 rounded-xl bg-white text-blackish px-5 py-4'>home dropdown</div>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
                     </li>
+                    <div className='absolute top-10 z-30 left-10 rounded-xl bg-white text-blackish px-5 py-4'> About dropdown</div>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
                     </li>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
