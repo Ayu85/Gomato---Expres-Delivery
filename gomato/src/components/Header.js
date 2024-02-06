@@ -12,7 +12,7 @@ const Header = () => {
                 {/* logo box */}
                 <img src={logo} alt='logo' />
             </div>
-            <div>
+            <div className='hidden lg:block'>
                 {/* menus box */}
                 <ul className='flex list-none text-white gap-4 '>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
@@ -27,7 +27,7 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
-            <div className='flex items-center gap-9 text-white'>
+            <div className=' items-center gap-9 text-white hidden lg:flex'>
                 <div className='flex items-center gap-2 text-yellowish font-semibold'><PiPhoneCallFill className='text-white' />
                     +91-9005676379</div>
                 <div><FaUserAlt />
