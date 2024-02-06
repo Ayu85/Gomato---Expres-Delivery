@@ -38,9 +38,8 @@ const Header = () => {
             </div>
             <div className='flex sm:flex md:flex lg:hidden'>
                 <RxHamburgerMenu className='text-white text-3xl cursor-pointer'/>
-
             </div>
-
+        
         </div>
     )
 }
