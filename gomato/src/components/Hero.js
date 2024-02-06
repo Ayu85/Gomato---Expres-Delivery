@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import courier from "../assets/courier-person.png"
 import { MdNavigateNext } from 'react-icons/md';
-import logo from '../assets/darklogo.png'
+import logo from '../assets/logo.png'
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from 'react-redux';
 import { toogleHamburger } from '../redux/slices/Hamburgerslice';
@@ -30,7 +30,7 @@ const Hero = () => {
                 <img src={courier} alt='logo' className={`md:w-[800px] mt-20 ${!showbike && "translate-x-[1000px] transition-all duration-1000"} ${showbike && "translate-x-[1px] transition-all duration-1000"}`} />
             </div>
             {<div className={`bg-[#04040481] border-gray lg:hidden
-             backdrop-blur-sm absolute top-0 w-96 h-full -right-96  transition-all duration-300 ${showHamburger && "right-1 transition-all duration-500"}`}>
+             backdrop-blur-md absolute top-0 w-full h-full ${!showHamburger && "-right-[1100px] transition-all duration-500"} ${showHamburger && "right-0 transition-all duration-500"}`}>
                 {/* menus box */}
                 <div className='flex justify-between px-10 items-center py-7'>
                     <img src={logo} alt='logo' />
@@ -38,7 +38,7 @@ const Hero = () => {
                         dispatch(toogleHamburger())
                     }} />
                 </div>
-                <ul className='flex list-none text-white text-xl gap-4 '>
+                <ul className='flex flex-col pl-5 list-none text-white text-xl gap-4 '>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
                     </li>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />

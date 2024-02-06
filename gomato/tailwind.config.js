@@ -9,7 +9,7 @@ module.exports = {
       ghee: "#F2EFE6",
       white: "#fff",
       gray: '#595959',
-      transblack: '#272727',
+      transblack: 'rgba(40, 41, 50, 0.89)',
     }
   },
   plugins: [],
