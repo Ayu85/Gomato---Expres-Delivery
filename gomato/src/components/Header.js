@@ -15,7 +15,7 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const dispatch = useDispatch()
-   
+
     return (
         <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
             <div>
@@ -28,7 +28,7 @@ const Header = () => {
                     <li onMouseEnter={() => {
                         setShowhome(true)
                     }} onMouseLeave={() => {
-                       setShowhome(false)
+                        setShowhome(false)
                     }} className='flex items-center cursor-pointer hover:text-yellowish py-1'>Home<MdNavigateNext />
                     </li>
                     {showHome && <div onMouseEnter={() => {
@@ -40,7 +40,6 @@ const Header = () => {
                         <li>Water Delivery</li>
                         <li>Medical Supplies</li>
                         <li>Pizza Time</li>
-
                     </div>
 
                     }
@@ -50,7 +49,16 @@ const Header = () => {
                         setShowabout(false)
                     }} className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
                     </li>
-                    {showAbout && <div className='absolute top-9 z-30 left-10 rounded-xl bg-white text-blackish px-5 py-4'> About dropdown</div>
+                    {showAbout && <div onMouseEnter={() => {
+                        setShowabout(true)
+                    }} onMouseLeave={() => {
+                        setShowabout(false)
+                    }} className='absolute text-sm font-semibold gap-4 flex flex-col top-9 z-30 left-10 rounded-xl bg-white text-blackish px-16  py-6'>
+                        <li>Testimonials</li>
+                        <li>FAQ's</li>
+                        <li>Gallery</li>
+                        <li>404 Page</li>
+                    </div>
                     }
                     <li onMouseEnter={() => {
                         setShowcatalog(true)
@@ -58,7 +66,11 @@ const Header = () => {
                         setShowcatalog(false)
                     }} className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
                     </li>
-                    {showCatalog && <div className='absolute  top-9 z-30 left-32 rounded-xl bg-white text-blackish px-5 py-4'> Cataloge dropdown</div>
+                    {showCatalog && <div className='absolute flex flex-col gap-4 text-sm font-semibold   top-9 z-30 left-32 rounded-xl bg-white text-blackish px-14  py-6'>
+                        <li>Shop</li>
+                        <li>Cart</li>
+                        <li>Checkout</li>
+                        <li>My Account</li></div>
                     }
                     <li onMouseEnter={() => {
                         setShowblog(true)
@@ -66,7 +78,13 @@ const Header = () => {
                         setShowblog(false)
                     }} className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
                     </li>
-                    {showBlog && <div className='absolute top-9 z-30 left-52 rounded-xl bg-white text-blackish px-5 py-4'> Blog dropdown</div>
+                    {showBlog && <div onMouseEnter={() => {
+                        setShowblog(true)
+                    }} onMouseLeave={() => {
+                        setShowblog(false)
+                    }} className='absolute cursor-pointer flex flex-col gap-4 text-sm font-semibold top-9 z-30 left-52 rounded-xl bg-white text-blackish px-14  py-6'>
+                        <li>Blog With Us</li>
+                        <li>Read Blogs</li></div>
                     }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
