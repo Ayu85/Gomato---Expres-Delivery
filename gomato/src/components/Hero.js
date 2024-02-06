@@ -12,7 +12,7 @@ const Hero = () => {
     useEffect(() => {
         setTimeout(() => {
             setShowbike(true)
-        }, 700)
+        }, 400)
     }, [])
     return (
         <div className='bg-blackish flex flex-wrap relative pt-20 sm:pt-20 md:pt-28 lg:pt-10 items-center justify-center gap-28 py-5 overflow-x-hidden '>
@@ -25,7 +25,7 @@ const Hero = () => {
             </div>
             <div className='lg:-mt-10 md:-mt-28 -mt-28 '>
                 {/* right box */}
-                <img src={courier} alt='logo' className={`md:w-[800px] mt-20 translate-x-[1000px] ${showbike && "translate-x-2 transition-all duration-1000"}`} />
+                <img src={courier} alt='logo' className={`md:w-[800px] mt-20 translate-x-[1000px] ${showbike && "translate-x-1 transition-all duration-1000"}`} />
             </div>
             {<div className={`bg-[#04040481] border-gray 
              backdrop-blur-sm absolute top-0 w-96 h-screen -right-96  transition-all duration-300 ${showHamburger && "right-1 transition-all duration-500"}`}>
