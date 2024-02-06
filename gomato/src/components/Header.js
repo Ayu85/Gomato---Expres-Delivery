@@ -4,7 +4,7 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import { FaUserAlt } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 import { MdNavigateNext } from "react-icons/md";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from 'react-redux';
 import { toogleHamburger } from '../redux/slices/Hamburgerslice';
 
@@ -41,9 +41,11 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex sm:flex md:flex lg:hidden'>
-                <RxHamburgerMenu className='text-white text-3xl cursor-pointer' onClick={() => {
+                {showHamburger ? <RxCross1 className='text-3xl text-white font-bold cursor-pointer' onClick={() => {
                     dispatch(toogleHamburger())
-                }} />
+                }} /> : <RxHamburgerMenu className='text-white text-3xl cursor-pointer' onClick={() => {
+                    dispatch(toogleHamburger())
+                }} />}
             </div>
 
         </div>
