@@ -1,16 +1,21 @@
 import React from 'react'
+import { FaCalendarAlt } from "react-icons/fa";
+import { IoIosTime } from "react-icons/io";
 
 import rest1 from "../assets/recommendation/rest_01.jpg"
 const Recommendation = () => {
     return (
         <div className='h-[100vh] px-5  '>
             {/* main div */}
-            <div className='w-1/2 cursor-pointer box-border bg-ghee overflow-hidden rounded-2xl'>
+            <div className='w-1/2 cursor-pointer box-border  overflow-hidden rounded-2xl relative'>
                 {/* left div */}
-                <img src={rest1} alt='logo' className='h-[90%] hover:scale-110 transition-all z-10' />
-                <div className='z-20'>Burger House</div>
-                <h1>Date</h1>
-                <h1>Time</h1>
+                <img src={rest1} alt='logo' className='h-[90%] hover:scale-[1.1] transition-all ' />
+                <div className='absolute flex flex-col gap-4 bottom-0 w-full bg-ghee rounded-b-2xl pl-7 py-5'>
+                    <div className='text-5xl text-blackish font-bold'>Burger House</div>
+                    <h1 className='flex items-center gap-3  text-gray'><FaCalendarAlt className='text-yellowish' />
+                        Monday - Saturday</h1>
+                    <h1 className='flex items-center gap-3  text-gray'><IoIosTime className='text-yellowish text-xl' />
+                        09:00 - 18:00 </h1></div>
             </div>
             <div className='w-1/2'>
                 {/* right div */}
