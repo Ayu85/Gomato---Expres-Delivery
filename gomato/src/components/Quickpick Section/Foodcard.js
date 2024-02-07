@@ -9,7 +9,7 @@ const Foodcard = ({ name, price, about, img }) => {
             <h1 className='text-lg font-semibold text-blackish'>{name}</h1>
             <h1 className='text-gray line-clamp-2 w-60'>{about}</h1>
             <h1 className='text-lg font-bold text-blackish'>💲{price}</h1>
-            <button className='bg-yellowish px-8 py-3 text-blackish rounded-full text-sm font-semibold'>Add To Cart</button>
+            <button className='bg-yellowish px-8 bg_slider py-3 text-blackish rounded-full text-sm font-semibold'>Add To Cart</button>
         </div>
     )
 }
