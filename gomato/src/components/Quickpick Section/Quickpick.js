@@ -6,7 +6,7 @@ const Quickpick = () => {
     const dispatch = useDispatch();
     const currentItem=useSelector(store=>store.currentitem.item)
     return (
-        <div className='flex justify-center mt-5 flex-col'>
+        <div className='flex justify-center mt-5 flex-col py-10'>
             <Headings />
             <Foodcontainer />
         </div>
