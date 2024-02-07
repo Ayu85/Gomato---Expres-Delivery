@@ -26,7 +26,7 @@ const Hero = () => {
                 <h1 className={`lg:text-7xl md:text-7xl text-4xl flex items-center gap-1   font-bold text-yellowish w-max ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Home Delivery<TbTruckDelivery className='text-7xl'/>
                 </h1>
                 <p className={`text-white md:text-center sm:text-center lg:text-start ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`} >Curabitur imperdiet varius lacus, id placerat purus vulputate non. Fusce in felis vel arcu maximus placerat eu ut arcu. Ut nunc ex, gravida vel porttitor et, pretium ac sapien.</p>
-                <button className={`px-5 sm:mt-10 lg:mt-2 mt-10 py-5 w-60 text-lg font-semibold text-blackish bg-yellowish rounded-full ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Read More</button>
+                <button className={`bg_slider2 px-5 sm:mt-10 lg:mt-2 mt-10 py-5 w-60 text-lg font-semibold text-blackish bg-yellowish rounded-full ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Read More</button>
             </div>
             <div className='lg:-mt-10 z-40 md:-mt-28 -mt-28 '>
                 {/* right box */}
