@@ -11,11 +11,11 @@ import rest5 from "../assets/recommendation/rest_05.jpg"
 
 const Recommendation = () => {
     return (
-        <div className='flex flex-col justify-center items-center gap-4 mt-5'>
+        <div className='flex flex-col justify-center items-center gap-4 mt-5  hidden lg:flex'>
             <h1 className='text-yellowish font-semibold text-xl'>Our Recommendations</h1>
             <h1 className='text-5xl text-blackish font-semibold mb-4'>Cafes and Restaurants</h1>
 
-            <div className='h-[120vh] px-5  gap-3 hidden lg:flex overflow-hidden'>
+            <div className='h-[120vh] px-5  gap-3 overflow-hidden'>
                 {/* main div */}
                 <div className='w-[50%]  cursor-pointer box-border  overflow-hidden rounded-2xl relative'>
                     {/* left div */}
