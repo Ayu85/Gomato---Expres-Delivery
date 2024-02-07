@@ -49,7 +49,8 @@ const Header = () => {
                         setShowabout(true)
                     }} onMouseLeave={() => {
                         setShowabout(false)
-                    }} className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>About us{showAbout ? <IoChevronDown className='text-sm ' /> :
+                        <MdNavigateNext />}
                     </li>
                     {showAbout && <div onMouseEnter={() => {
                         setShowabout(true)
@@ -66,7 +67,8 @@ const Header = () => {
                         setShowcatalog(true)
                     }} onMouseLeave={() => {
                         setShowcatalog(false)
-                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Catalog{showCatalog ? <IoChevronDown className='text-sm ' /> :
+                        <MdNavigateNext />}
                     </li>
                     {showCatalog && <div onMouseEnter={() => {
                         setShowcatalog(true)
@@ -82,7 +84,8 @@ const Header = () => {
                         setShowblog(true)
                     }} onMouseLeave={() => {
                         setShowblog(false)
-                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Blog{showBlog ? <IoChevronDown className='text-sm ' /> :
+                        <MdNavigateNext />}
                     </li>
                     {showBlog && <div onMouseEnter={() => {
                         setShowblog(true)
