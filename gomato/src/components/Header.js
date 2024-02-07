@@ -30,7 +30,7 @@ const Header = () => {
                         setShowhome(true)
                     }} onMouseLeave={() => {
                         setShowhome(false)
-                    }} className='flex items-center justify-center cursor-pointer hover:text-yellowish py-1'>Home{showHome ? <IoChevronDown className='text-sm ' /> :
+                    }} className='flex items-center justify-center cursor-pointer hover:text-yellowish py-1 '>Home{showHome ? <IoChevronDown className='text-sm ' /> :
                         <MdNavigateNext />}
                     </li>
                     {showHome && <div onMouseEnter={() => {

@@ -5,6 +5,7 @@ import logo from '../assets/logo.png'
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from 'react-redux';
 import { toogleHamburger } from '../redux/slices/Hamburgerslice';
+import { TbTruckDelivery } from "react-icons/tb";
 import bglogo from '../assets/app-bg.png'
 const Hero = () => {
     const showHamburger = useSelector(store => store.Hamburger.isShown)
@@ -22,7 +23,8 @@ const Hero = () => {
             <div className='w-96 z-40 flex items-center flex-col gap-3 sm:items-center lg:items-start md:items-center'>
                 {/* left box */}
                 <h1 className={`lg:text-7xl md:text-7xl text-4xl font-bold text-white ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Express </h1>
-                <h1 className={`lg:text-7xl md:text-7xl text-4xl  font-bold text-yellowish w-max ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Home Delivery</h1>
+                <h1 className={`lg:text-7xl md:text-7xl text-4xl flex items-center gap-1   font-bold text-yellowish w-max ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Home Delivery<TbTruckDelivery className='text-7xl'/>
+                </h1>
                 <p className={`text-white md:text-center sm:text-center lg:text-start ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`} >Curabitur imperdiet varius lacus, id placerat purus vulputate non. Fusce in felis vel arcu maximus placerat eu ut arcu. Ut nunc ex, gravida vel porttitor et, pretium ac sapien.</p>
                 <button className={`px-5 sm:mt-10 lg:mt-2 mt-10 py-5 w-60 text-lg font-semibold text-blackish bg-yellowish rounded-full ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Read More</button>
             </div>
@@ -52,7 +54,7 @@ const Hero = () => {
                 </ul>
             </div>}
             {/* this is bg of hero section ...is absolute */}
-            
+
         </div>
     )
 }

@@ -10,6 +10,7 @@ module.exports = {
       white: "#fff",
       gray: '#595959',
       transblack: 'rgba(40, 41, 50, 0.89)',
+      buttoncolor: '#F2EFE6'
     }
   },
   plugins: [],
