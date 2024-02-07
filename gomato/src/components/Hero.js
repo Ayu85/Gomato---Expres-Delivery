@@ -34,7 +34,7 @@ const Hero = () => {
             </div>
             {/* this is absolute hamburger menu box */}
             {<div className={`bg-[#04040481] border-gray lg:hidden
-             backdrop-blur-md absolute top-0 w-full h-full ${!showHamburger && "-right-[1100px] transition-all duration-500"} ${showHamburger && "right-0 transition-all duration-500"}`}>
+             backdrop-blur-lg filter absolute top-0 w-full h-full ${!showHamburger && "-right-[1100px] transition-all duration-500"} ${showHamburger && "right-0 transition-all duration-500"}`}>
                 {/* menus box */}
                 <div className='flex justify-between px-10 items-center py-7'>
                     <img src={logo} alt='logo' />
