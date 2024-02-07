@@ -7,6 +7,7 @@ import { MdNavigateNext } from "react-icons/md";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from 'react-redux';
 import { toogleHamburger } from '../redux/slices/Hamburgerslice';
+import { IoChevronDown } from "react-icons/io5";
 
 const Header = () => {
     const [showHome, setShowhome] = useState(false)
@@ -29,7 +30,8 @@ const Header = () => {
                         setShowhome(true)
                     }} onMouseLeave={() => {
                         setShowhome(false)
-                    }} className='flex items-center cursor-pointer hover:text-yellowish py-1'>Home<MdNavigateNext />
+                    }} className='flex items-center justify-center cursor-pointer hover:text-yellowish py-1'>Home{showHome ? <IoChevronDown className='text-sm ' /> :
+                        <MdNavigateNext />}
                     </li>
                     {showHome && <div onMouseEnter={() => {
                         setShowhome(true)
