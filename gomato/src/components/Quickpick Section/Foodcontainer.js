@@ -16,38 +16,42 @@ import meat1 from "../../assets/food items/meat_01-1024x1024.jpg"
 import meat2 from "../../assets/food items/meat_02-1024x1024.jpg"
 import meat3 from "../../assets/food items/meat_03-1024x1024.jpg"
 import meat4 from "../../assets/food items/meat_04-1024x1024.jpg"
+import { useDispatch, useSelector } from 'react-redux'
 
 const Foodcontainer = () => {
+    const dispatch = useDispatch();
+    const currentItem = useSelector(store => store.currentitem.item)
+
     return (
         <div >
             {/* burger food */}
-            <div className='pt-5 flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'><Foodcard name={'Cheeseburger with Salad'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={burger1} price={19.20} />
+            {currentItem === 'burger' && <div className='pt-5 flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'><Foodcard name={'Cheeseburger with Salad'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={burger1} price={19.20} />
                 <Foodcard name={'Black Gamburger with Fishcake'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={burger2} price={19.20} />
                 <Foodcard name={'Classic Bacon Hamburger'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={burger3} price={19.20} />
                 <Foodcard name={'Royal Cheeseburger with Bacon'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={burger4} price={19.20} />
-            </div>
+            </div>}
             {/* pizza food */}
-            <div className='pt-5 flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'>
+            {currentItem === 'pizza' && <div className='pt-5 flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'>
                 <Foodcard name={'Shrimp and Olive Pizza'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={pizza1} price={16.20} />
                 <Foodcard name={'Seafood Pizza'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={pizza2} price={23.20} />
                 <Foodcard name={'Vegetarian Pizza'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={pizza3} price={19.20} />
                 <Foodcard name={'Pizza With Mushrooms'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={pizza4} price={17.20} />
-            </div>
+            </div>}
             {/* asian food */}
-            <div className='pt-5 flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'>
+            {currentItem === 'asian' && < div className='pt-5 flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'>
                 <Foodcard name={'Red Fish Roll'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={asian1} price={23.20} />
                 <Foodcard name={'Seafood '} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={asian2} price={33.20} />
                 <Foodcard name={'Octopus Roll'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={asian3} price={30.20} />
                 <Foodcard name={'Shrimp Roll'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={asian4} price={25.20} />
-            </div>
+            </div>}
             {/* raw meat food */}
-            <div className='pt-5 flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'>
+            {currentItem === 'meat' && <div className='pt-5 flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'>
                 <Foodcard name={'Whole Chicken'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={meat1} price={23.20} />
                 <Foodcard name={'Boiled Pork With Spices'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={meat2} price={33.20} />
                 <Foodcard name={'Chicken Breast'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={meat3} price={30.20} />
                 <Foodcard name={'Herb Chicken'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={meat4} price={25.20} />
-            </div>
-        </div>
+            </div>}
+        </div >
     )
 }
 
