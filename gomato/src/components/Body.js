@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Hero from './Hero'
 import Foodbuttons from './Foodbuttons'
+import Quickpick from './Quickpick Section/Quickpick'
 
 const Body = () => {
     return (
@@ -9,6 +10,7 @@ const Body = () => {
             <Header />
             <Hero />
             <Foodbuttons/>
+            <Quickpick/>
         </div>
     )
 }
