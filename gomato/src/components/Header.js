@@ -37,7 +37,7 @@ const Header = () => {
                         setShowhome(true)
                     }} onMouseLeave={() => {
                         setShowhome(false)
-                    }} className='absolute z-50 list-none flex flex-col gap-4 text-sm font-semibold top-9 cursor-pointer  -left-14 rounded-xl bg-white text-blackish px-14  py-6'>
+                    }} className={`${!showHome && "opacity-0 transition-all duration-500"} ${showHome && "opacity-100 transition-all duration-500"} absolute z-50 list-none flex flex-col gap-4 text-sm font-semibold top-9 cursor-pointer  -left-14 rounded-xl bg-white text-blackish px-14  py-6`}>
                         <li>Food Delivery</li>
                         <li>Water Delivery</li>
                         <li>Medical Supplies</li>
