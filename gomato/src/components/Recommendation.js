@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoIosTime } from "react-icons/io";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 import rest1 from "../assets/recommendation/rest_01.jpg"
 const Recommendation = () => {
@@ -16,6 +17,8 @@ const Recommendation = () => {
                         Monday - Saturday</h1>
                     <h1 className='flex items-center gap-3  text-gray'><IoIosTime className='text-yellowish text-xl' />
                         09:00 - 18:00 </h1></div>
+            <div className='absolute bottom-3 right-5  bg-yellowish px-1 py-1 rounded-full '><FaLongArrowAltRight className='text-3xl w-full hover:translate-x-5 transition-all' />
+            </div>
             </div>
             <div className='w-1/2'>
                 {/* right div */}
