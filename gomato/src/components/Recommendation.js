@@ -11,9 +11,9 @@ import rest5 from "../assets/recommendation/rest_05.jpg"
 
 const Recommendation = () => {
     return (
-        <div className='h-[140vh] px-5 flex gap-5'>
+        <div className='h-[140vh] px-5  gap-5 hidden lg:flex'>
             {/* main div */}
-            <div className='w-[45%] cursor-pointer box-border  overflow-hidden rounded-2xl relative'>
+            <div className='w-[45%]  cursor-pointer box-border  overflow-hidden rounded-2xl relative'>
                 {/* left div */}
                 <img src={rest1} alt='logo' className='h-[90%] hover:scale-[1.1] transition-all w-full' />
                 <div className='absolute flex flex-col gap-4 bottom-0 w-full bg-ghee rounded-b-2xl pl-7 py-5'>
