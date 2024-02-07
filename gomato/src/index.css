@@ -4,6 +4,6 @@
 @tailwind utilities;
 
 
-:root {
+*{
   font-family: "Rubik", sans-serif;
 }
