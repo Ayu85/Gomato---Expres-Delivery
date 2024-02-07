@@ -22,6 +22,10 @@ const Recommendation = () => {
             </div>
             <div className='w-1/2'>
                 {/* right div */}
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     )
