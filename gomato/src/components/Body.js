@@ -3,6 +3,7 @@ import Header from './Header'
 import Hero from './Hero'
 import Foodbuttons from './Foodbuttons'
 import Quickpick from './Quickpick Section/Quickpick'
+import Recommendation from './Recommendation'
 
 const Body = () => {
     return (
@@ -11,6 +12,7 @@ const Body = () => {
             <Hero />
             <Foodbuttons/>
             <Quickpick/>
+            <Recommendation/>
         </div>
     )
 }
