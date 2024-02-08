@@ -9,7 +9,7 @@ const Heromedical = () => {
           alt='logo' className='w-full h-[90vh] brightness-50 ' />
       </div>
       <div className='absolute z-50 text-white font-bold text-5xl left-1/2 
-      -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center gap-6'> MEDICAL SUPPLIES<FaBriefcaseMedical className='-mt-2 text-yellowish'/>
+      -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center gap-6'> <FaBriefcaseMedical className='-mt-2 text-yellowish' />MEDICAL SUPPLIES<FaBriefcaseMedical className='-mt-2 text-yellowish' />
       </div>
     </div>
   )
