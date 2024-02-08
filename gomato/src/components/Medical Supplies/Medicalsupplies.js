@@ -12,6 +12,7 @@ const Medicalsupplies = () => {
       <Header />
       <Heromedical/>
       <Products/>
+      
     </div>
   )
 }
