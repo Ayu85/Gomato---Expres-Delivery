@@ -19,7 +19,7 @@ const Hero = () => {
         }, 400)
     }, [])
     return (
-        <div className='bg-blackish flex flex-wrap relative pt-20 sm:pt-20 md:pt-28 lg:pt-10 items-center justify-center gap-28 py-5 overflow-x-hidden '>
+        <div className='bg-blackish  flex flex-wrap relative pt-20 sm:pt-20 md:pt-28 lg:pt-10 items-center justify-center gap-28 py-5 overflow-x-hidden '>
             <div className='w-96 z-40 flex items-center flex-col gap-3 sm:items-center lg:items-start md:items-center'>
                 {/* left box */}
                 <h1 className={`lg:text-7xl md:text-7xl text-4xl font-bold text-white ${!showHeading && '-translate-x-[900px]'}  ${showHeading && '-translate-x-0 transition-all duration-1000'}`}>Express </h1>

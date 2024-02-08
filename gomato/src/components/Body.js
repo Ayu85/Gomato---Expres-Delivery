@@ -5,10 +5,10 @@ import Foodbuttons from './Foodbuttons'
 import Quickpick from './Quickpick Section/Quickpick'
 import Recommendation from './Recommendation'
 import PizzaAd from './PizzaAd'
-
+    
 const Body = () => {
     return (
-        <div >
+        <div className='overflow-hidden'>
             <Header />
             <Hero />
             <Foodbuttons />

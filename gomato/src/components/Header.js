@@ -8,7 +8,7 @@ import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from 'react-redux';
 import { toogleHamburger } from '../redux/slices/Hamburgerslice';
 import { IoChevronDown } from "react-icons/io5";
-
+import { useNavigate } from 'react-router-dom'
 const Header = () => {
     const [showHome, setShowhome] = useState(false)
     const [showAbout, setShowabout] = useState(false)
@@ -16,7 +16,7 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const dispatch = useDispatch()
-
+    const navigate = useNavigate();
     return (
         <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
             <div>
@@ -37,11 +37,13 @@ const Header = () => {
                         setShowhome(true)
                     }} onMouseLeave={() => {
                         setShowhome(false)
-                    }} className={`${!showHome && "opacity-0 transition-all duration-500"} ${showHome && "opacity-100 transition-all duration-500"} absolute z-50 list-none flex flex-col gap-4 text-sm font-semibold top-9 cursor-pointer  -left-14 rounded-xl bg-white text-blackish px-14  py-6`}>
-                        <li>Food Delivery</li>
-                        <li>Water Delivery</li>
-                        <li>Medical Supplies</li>
-                        <li>Pizza Time</li>
+                    }} className={`${!showHome && "opacity-0 transition-all duration-500"} ${showHome && "opacity-100 transition-all duration-500"} absolute z-50 list-none flex flex-col gap- text-sm font-semibold top-9 cursor-pointer  -left-14 rounded-xl bg-white text-blackish px-5  py-4`}>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Food Delivery</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Water Delivery</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 ' onClick={() => {
+                            navigate('/medicalsupplies')
+                        }}>Medical Supplies</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Pizza Time</li>
                     </div>
 
                     }
@@ -57,10 +59,10 @@ const Header = () => {
                     }} onMouseLeave={() => {
                         setShowabout(false)
                     }} className='absolute text-sm z-50 font-semibold gap-4 flex flex-col top-9  left-10 rounded-xl bg-white text-blackish px-16  py-6'>
-                        <li>Testimonials</li>
-                        <li>FAQ's</li>
-                        <li>Gallery</li>
-                        <li>404 Page</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Testimonials</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>FAQ's</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Gallery</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>404 Page</li>
                     </div>
                     }
                     <li onMouseEnter={() => {
@@ -75,10 +77,10 @@ const Header = () => {
                     }} onMouseLeave={() => {
                         setShowcatalog(false)
                     }} className='absolute flex flex-col cursor-pointer gap-4 text-sm font-semibold   top-9 z-50 left-32 rounded-xl bg-white text-blackish px-14  py-6'>
-                        <li>Shop</li>
-                        <li>Cart</li>
-                        <li>Checkout</li>
-                        <li>My Account</li></div>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Shop</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Cart</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Checkout</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>My Account</li></div>
                     }
                     <li onMouseEnter={() => {
                         setShowblog(true)
@@ -92,8 +94,8 @@ const Header = () => {
                     }} onMouseLeave={() => {
                         setShowblog(false)
                     }} className='absolute cursor-pointer flex flex-col gap-4 text-sm font-semibold top-9 z-50 left-52 rounded-xl bg-white text-blackish px-14  py-6'>
-                        <li>Blog With Us</li>
-                        <li>Read Blogs</li></div>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Blog With Us</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Read Blogs</li></div>
                     }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
