@@ -8,6 +8,7 @@ const Medicalsupplies = () => {
   return (
     <div>
         <Header/>
+        <div></div>
     </div>
   )
 }
