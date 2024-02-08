@@ -37,7 +37,7 @@ const Header = () => {
                         setShowhome(true)
                     }} onMouseLeave={() => {
                         setShowhome(false)
-                    }} className={`${!showHome && "opacity-0 transition-all duration-500"} ${showHome && "opacity-100 transition-all duration-500"} absolute z-50 list-none flex flex-col gap- text-sm font-semibold top-9 cursor-pointer  -left-14 rounded-xl bg-white text-blackish px-5  py-4`}>
+                    }} className={`${!showHome && "opacity-0 transition-all duration-500"} ${showHome && "opacity-100 transition-all duration-500"} absolute z-50 list-none flex flex-col  text-sm font-semibold top-9 cursor-pointer  -left-14 rounded-xl bg-white text-blackish px-5  py-4`}>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Food Delivery</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Water Delivery</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 ' onClick={() => {
@@ -58,7 +58,7 @@ const Header = () => {
                         setShowabout(true)
                     }} onMouseLeave={() => {
                         setShowabout(false)
-                    }} className='absolute text-sm z-50 font-semibold gap-4 flex flex-col top-9  left-10 rounded-xl bg-white text-blackish px-16  py-6'>
+                    }} className='absolute text-sm z-50 font-semibold  flex flex-col top-9  left-10 rounded-xl bg-white text-blackish px-5  py-4'>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Testimonials</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>FAQ's</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Gallery</li>
@@ -76,7 +76,7 @@ const Header = () => {
                         setShowcatalog(true)
                     }} onMouseLeave={() => {
                         setShowcatalog(false)
-                    }} className='absolute flex flex-col cursor-pointer gap-4 text-sm font-semibold   top-9 z-50 left-32 rounded-xl bg-white text-blackish px-14  py-6'>
+                    }} className='absolute flex flex-col cursor-pointer  text-sm font-semibold   top-9 z-50 left-32 rounded-xl bg-white text-blackish px-5  py-4'>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Shop</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Cart</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Checkout</li>
@@ -93,13 +93,13 @@ const Header = () => {
                         setShowblog(true)
                     }} onMouseLeave={() => {
                         setShowblog(false)
-                    }} className='absolute cursor-pointer flex flex-col gap-4 text-sm font-semibold top-9 z-50 left-52 rounded-xl bg-white text-blackish px-14  py-6'>
+                    }} className='absolute cursor-pointer flex flex-col  text-sm font-semibold top-9 z-50 left-52 rounded-xl bg-white text-blackish px-5  py-4'>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Blog With Us</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Read Blogs</li></div>
                     }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
-                </ul>
+                </ul>   
             </div>
             <div className=' items-center gap-9 text-white hidden lg:flex'>
                 <div className='flex items-center gap-2 text-yellowish font-semibold'><PiPhoneCallFill className='text-white' />
