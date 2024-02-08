@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Header from "../components/Header"
+import Header from "../Header"
 const Medicalsupplies = () => {
   const [title, setTitle] = useState('Medical Supplies - GoMoto')
   useEffect(() => {
@@ -8,7 +8,7 @@ const Medicalsupplies = () => {
   return (
     <div>
         <Header/>
-        <div></div>
+        
     </div>
   )
 }

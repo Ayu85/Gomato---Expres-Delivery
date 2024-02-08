@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Medicalsupplies from "./components/Medicalsupplies";
+import Medicalsupplies from "./components/Medical Supplies/Medicalsupplies";
 const approute = createBrowserRouter([
   {
     path: '/',
