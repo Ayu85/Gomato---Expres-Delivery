@@ -8,9 +8,9 @@ import { MdNavigateNext } from "react-icons/md";
 const Products = () => {
   const currentIndex = useSelector(store => store.currentProductIndex.value)
   return (
-    <div className='flex px-6 items-center'>
+    <div className='flex px-6 '>
       {/* category section */}
-      <div className='w-[30%] flex flex-col gap-3'>
+      <div className='hidden lg:flex w-[30%]  flex-col gap-3'>
         <div className='bg-[#F2EFE6] w-full mt-10 py-8 px-5 flex relative items-center justify-center  rounded-2xl '>
           {/* searchbar */}
           <img src={wave} alt='logo' className='absolute w-full ' />
