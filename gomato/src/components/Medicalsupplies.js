@@ -7,7 +7,7 @@ const Medicalsupplies = () => {
   }, [title])
   return (
     <div>
-
+        
     </div>
   )
 }
