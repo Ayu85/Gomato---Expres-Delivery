@@ -60,5 +60,67 @@ const medicalSupplies = [
             product_name: 'Instrument Container ',
             price: 26.25
         }
+    ],
+    [
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_14.jpg            ',
+            product_name: 'Latex Gloves',
+            price: 11.25
+        },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_15.jpg            ',
+            product_name: 'Donor Blood Container',
+            price: 14.39
+        },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_16.jpg            ',
+            product_name: 'Blood test container',
+            price: 18.99
+        },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_17.jpg            ',
+            product_name: 'Aspirin',
+            price: 24.25
+        },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_18.jpg            ',
+            product_name: 'Refular Medical Mask',
+            price: 22.25
+        }, {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_19.jpg            ',
+            product_name: 'Spray Bottle ',
+            price: 26.25
+        }
+    ],
+    [
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_20.jpg            ',
+            product_name: 'Medical Syringe(5ml)',
+            price: 8.25
+        },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_21.jpg            ',
+            product_name: ' Face Shield',
+            price: 14.39
+        },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_22.jpg            ',
+            product_name: 'Elastic Bandage(5m)',
+            price: 18.99
+        },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_23.jpg            ',
+            product_name: 'Civil Masks(20pc)',
+            price: 24.25
+        },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_11.jpg            ',
+            product_name: 'Antiallergic Pills(30tab)',
+            price: 22.25
+        }, {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_24.jpg            ',
+            product_name: 'Pills Container ',
+            price: 26.25
+        }
     ]
 ]
