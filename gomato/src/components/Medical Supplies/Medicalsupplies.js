@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from "../Header"
+import Heromedical from './Heromedical'
 const Medicalsupplies = () => {
   const [title, setTitle] = useState('Medical Supplies - GoMoto')
   useEffect(() => {
@@ -7,8 +8,8 @@ const Medicalsupplies = () => {
   }, [title])
   return (
     <div>
-        <Header/>
-        
+      <Header />
+      <Heromedical/>
     </div>
   )
 }
