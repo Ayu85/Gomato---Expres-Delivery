@@ -14,7 +14,7 @@ const Products = () => {
   const barStatus = useSelector(store => store.productSlider.value)
   const dispatch = useDispatch();
   return (
-    <div className='flex px-6 relative '>
+    <div className={`flex px-6 relative  `} >
       {/* category section */}
       <div className='hidden lg:flex w-[30%]  flex-col gap-3'>
         <div className='bg-[#F2EFE6] w-full mt-10 py-8 px-5 flex relative items-center justify-center  rounded-2xl '>
@@ -65,7 +65,7 @@ const Products = () => {
       {/* ***************************************/}
       {/* side bar opening and closing */}
       {/* ***************************************/}
-      <div className={`absolute z-50 bg-white left-0 w-96 h-full ${!barStatus ? "-translate-x-[500px] transition-all duration-300" : "translate-x-0 transition-all duration-300"}`}>
+      <div className={`absolute z-50 bg-ghee left-0 w-96 h-full ${!barStatus ? "-translate-x-[500px] transition-all duration-300" : "translate-x-0 transition-all duration-300"}`}>
         <RxCross1 onClick={() => {
           dispatch(toogleBar())
         }} className='text-4xl ml-[50%] -translate-x-[50%] mt-6 -mb-4 cursor-pointer' />
