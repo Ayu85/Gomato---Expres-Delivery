@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from "../Header"
 import Heromedical from './Heromedical'
 import Products from './Products'
+import Pagebuttons from './Pagebuttons'
 const Medicalsupplies = () => {
   const [title, setTitle] = useState('Medical Supplies - GoMoto')
   useEffect(() => {
@@ -12,7 +13,7 @@ const Medicalsupplies = () => {
       <Header />
       <Heromedical/>
       <Products/>
-      
+      <Pagebuttons/>
     </div>
   )
 }
