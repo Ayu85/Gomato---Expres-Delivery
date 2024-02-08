@@ -1,4 +1,4 @@
-const medicalSupplies = [
+export const medicalSupplies = [
     [
         {
             logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/med_store_01-600x600.jpg',
