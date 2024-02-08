@@ -16,8 +16,8 @@ const Products = () => {
           <img src={wave} alt='logo' className='absolute w-full ' />
           <input type='text' placeholder='Enter Product Name' className='pl-5 z-50 px-8 py-4 rounded-full text-blackish placeholder:text-gray w-[600px]' />
         </div>
-        <div className=' border border-[#d2d1d1] border-dashed px-5 rounded-2xl'>
-          <h1 className='text-xl text-blackish font-semibold border-b border-[#d2d1d1] border-dashed py-3'>🚀PRODUCT CATEGORIES</h1>
+        <div className=' border border-[#d2d1d1] border-dashed px-5 rounded-2xl py-5'>
+          <h1 className='text-xl text-blackish font-semibold border-b border-[#d2d1d1] border-dashed pb-5'>🚀PRODUCT CATEGORIES</h1>
           <ul className='flex flex-col gap-3 py-5'>
             <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Asian Food</li>
             <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fast Food</li>
@@ -37,6 +37,8 @@ const Products = () => {
               <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Equipement</li>
               <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Gloves</li>
               <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Pills</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Latex Gloves</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vitamins</li>
             </ul>
           </ul>
         </div>
