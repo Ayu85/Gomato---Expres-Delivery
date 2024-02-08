@@ -2,7 +2,7 @@ import React from 'react'
 
 const Foodcard = ({ name, price, about, img }) => {
     return (
-        <div className='flex flex-col items-center justify-center gap-3 w-80 px-3 text-center cursor-pointer bg-white'>
+        <div initial={{ translateY: 200 }} whileInView={{ translateY: 0 }} transition={{ duration: 0.5 }} className='flex flex-col items-center justify-center gap-3 w-80 px-3 text-center cursor-pointer bg-white'>
             <div className='w-80'>
                 <img src={img} alt='logo' className='hover:scale-110 transition-all'/>
             </div>

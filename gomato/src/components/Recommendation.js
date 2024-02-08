@@ -11,7 +11,7 @@ import rest5 from "../assets/recommendation/rest_05.jpg"
 
 const Recommendation = () => {
     return (
-        <div className='flex flex-col justify-center items-center gap-4 mt-5  hidden lg:flex'>
+        <div className=' flex-col justify-center items-center gap-4 mt-5  hidden lg:flex'>
             <h1 className='text-yellowish font-semibold text-xl'>Our Recommendations</h1>
             <h1 className='text-5xl text-blackish font-semibold mb-4'>Cafes and Restaurants</h1>
 
