@@ -3,7 +3,6 @@ import { medicalSupplies } from "../../utils/__mocks__"
 import Productcard from './Productcard'
 import { useSelector } from 'react-redux'
 const Products = () => {
-  // const [currentIndex, setIndex] = useState(0)
   const currentIndex = useSelector(store => store.currentProductIndex.value)
   return (
     <div>
