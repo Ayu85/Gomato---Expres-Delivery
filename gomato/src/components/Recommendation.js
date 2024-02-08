@@ -20,10 +20,10 @@ const Recommendation = () => {
                 <div className='w-80 rounded-2xl bg-blackish overflow-hidden relative'>
                     {/* 1 restaurant */}
                     <div ><img src={rest1} alt='logo' className='hover:scale-110 transition-all  cursor-pointer' /></div>
-                    <div className='absolute bottom-0 bg-ghee w-full'>
-                        <h1>Burger King</h1>
-                        <h1>Monday - Saturday</h1>
-                        <h1>9:00 AM - 11:00 PM </h1>
+                    <div className='absolute bottom-0 bg-ghee w-full flex flex-col gap-3 pl-6 py-3'>
+                        <h1 className='text-xl font-semibold'>Burger King</h1>
+                        <h1 className='flex items-center gap-2 '><FaCalendarAlt className='text-yellowish text-lg' />Monday - Saturday</h1>
+                        <h1 className='flex items-center gap-2 '><IoIosTime FaCalendarAlt className='text-yellowish text-xl' />9:00 AM - 11:00 PM </h1>
                     </div>
                 </div>
             </div>
