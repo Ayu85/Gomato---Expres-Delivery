@@ -21,17 +21,22 @@ const Products = () => {
           <ul className='flex flex-col gap-3 py-5'>
             <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Asian Food</li>
             <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fast Food</li>
-            <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Hot Food</li>
+            <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Hot Pizza</li>
+            <ul className='ml-8 text-sm -mt-2'>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Cheesy</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fish and Seafood</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Italian</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vegeterian</li>
+            </ul>
             <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
             <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Raw Meat</li>
             <ul className='font-semibold  text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Medical Supplies</ul>
             <ul className='ml-8 text-sm -mt-2'>
-              <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Antiseptic</li>
-              <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Face Masks</li>
-              <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Equipement</li>
-              <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Gloves</li>
-              <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Pills</li>
-
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Antiseptic</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Face Masks</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Equipement</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Gloves</li>
+              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Pills</li>
             </ul>
           </ul>
         </div>
