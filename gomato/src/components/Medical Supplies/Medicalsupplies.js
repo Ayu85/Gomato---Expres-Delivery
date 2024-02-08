@@ -18,10 +18,10 @@ const Medicalsupplies = () => {
       <Header />
       <Heromedical />
       <Products />
-      <div onClick={() => {
+      {!barStatus && <div onClick={() => {
         dispatch(toogleBar())
       }} className='absolute left-0 z-[999] top-[50%] bg-yellowish rounded-r-full px-3 py-2 cursor-pointer'><FaSliders className='text-2xl' />
-      </div>
+      </div>}
     </div>
   )
 }
