@@ -23,7 +23,7 @@ const Foodcontainer = () => {
     const currentItem = useSelector(store => store.currentitem.item)
 
     return (
-        <div >
+        <div className='overflow-hidden'>
             {/* burger food */}
             {currentItem === 'burger' && <motion.div initial={{ translateY: 200 }} whileInView={{ translateY: 0 }} transition={{ duration: 0.5 }} className='pt-5 overflow-hidden flex flex-wrap  justify-center lg:justify-between gap-5 px-7 sm:flex-wrap sm:justify-center md:justify-center lg:flex-nowrap'><Foodcard name={'Cheeseburger with Salad'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={burger1} price={19.20} />
                 <Foodcard name={'Black Gamburger with Fishcake'} about={'A burger fully loaded with cheese and salad for better health , enjoy the taste of cheese and health together'} img={burger2} price={19.20} />
