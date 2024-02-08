@@ -17,10 +17,10 @@ const Recommendation = () => {
             <h1 className='text-blackish font-semibold text-4xl'>Cafes and Restautants</h1>
             {/* main container box with 6 restaurants */}
             <div>
-                <div className='w-80 rounded-2xl bg-blackish overflow-hidden'>
+                <div className='w-80 rounded-2xl bg-blackish overflow-hidden relative'>
                     {/* 1 restaurant */}
                     <div ><img src={rest1} alt='logo' className='hover:scale-110 transition-all  cursor-pointer' /></div>
-                    <div>
+                    <div className='absolute bottom-0 bg-ghee w-full'>
                         <h1>Burger King</h1>
                         <h1>Monday - Saturday</h1>
                         <h1>9:00 AM - 11:00 PM </h1>
