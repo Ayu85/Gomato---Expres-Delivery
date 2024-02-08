@@ -14,7 +14,7 @@ const Body = () => {
             <Foodbuttons />
             <Quickpick />
             <Recommendation />
-            {/* <PizzaAd /> */}
+            <PizzaAd />
         </div>
     )
 }
