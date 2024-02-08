@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import wave from '../../assets/overlay-waves-white.png'
 import { MdNavigateNext } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
+import Pagebuttons from './Pagebuttons'
 
 const Products = () => {
   const currentIndex = useSelector(store => store.currentProductIndex.value)
@@ -46,14 +47,18 @@ const Products = () => {
         </div>
       </div>
       {/* product section */}
-      <div className='w-[70%]'><div className='flex  justify-center items-center pt-10 gap-5 flex-wrap '>
-        {/* products */}
-        {
-          medicalSupplies[currentIndex].map((items) => {
-            return <Productcard product_name={items.product_name} logo={items.logo} price={items.price} />
-          })
-        }
-      </div></div>
+      <div className='w-[70%] flex flex-col justify-center items-center gap-4'>
+        <div className='flex  justify-center items-center pt-10 gap-5 flex-wrap '>
+          {/* products */}
+          {
+            medicalSupplies[currentIndex].map((items) => {
+              return <Productcard product_name={items.product_name} logo={items.logo} price={items.price} />
+            })
+          }
+        </div>
+        <Pagebuttons />
+      </div>
+
     </div>
   )
 }
