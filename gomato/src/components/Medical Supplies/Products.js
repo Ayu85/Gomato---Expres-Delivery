@@ -9,6 +9,7 @@ const Products = () => {
       </div>
       <div>
         {/* products */}
+        
       </div>
     </div>
   )
