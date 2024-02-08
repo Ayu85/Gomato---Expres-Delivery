@@ -9,7 +9,7 @@ const Products = () => {
         {/* searchbar */}
         <input type='text' placeholder='Enter Product Name' className='pl-5 px-8 py-5 rounded-full text-blackish placeholder:text-gray w-[600px]' />
       </div>
-      <div>
+      <div className='flex w-[70%] justify-center items-center pt-10 gap-5 flex-wrap ml-[50%] -translate-x-[50%]'>
         {/* products */}
         {
           medicalSupplies[currentIndex].map((items) => {
