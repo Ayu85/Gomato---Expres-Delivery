@@ -112,7 +112,9 @@ const Header = () => {
                     navigate('/user')
                 }}><FaUserAlt />
                 </div>
-                <div><IoCart />
+                <div className='cursor-pointer hover:scale-110 transition-all' onClick={() => {
+                    navigate('/cart')
+                }}><IoCart />
                 </div>
             </div>
             <div className='flex sm:flex md:flex lg:hidden'>
