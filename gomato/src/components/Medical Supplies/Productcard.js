@@ -10,7 +10,7 @@ const Productcard = ({ logo, product_name, price }) => {
             <div className='text-blackish text-lg font-semibold text-center'>{product_name}</div>
             <div className='text-lg font-semibold text-gray'>💲{price}</div>
             <button onClick={() => {
-                dispatch(addItem({ 'name': product_name, 'price': price }))
+                dispatch(addItem({ 'name': product_name, 'price': price, 'logo': logo }))
             }} className='bg_slider px-5 py-2 rounded-full'>Add To Cart</button>
         </motion.div >
     )
