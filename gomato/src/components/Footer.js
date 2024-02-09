@@ -9,7 +9,7 @@ import { CiInstagram } from "react-icons/ci";
 import waves from '../assets/waves_white-15.png'
 const Footer = () => {
     return (
-        <div className='bg-blackish flex flex-col justify-center items-center relative h-[90vh]'>
+        <div className='bg-blackish flex flex-col justify-center items-center relative h-[90vh] -mb-20'>
             <div className='flex py-10 px-5 relative z-40'>
                 <div><img src={footerbg} alt='logo' className='rounded-l-xl' /></div>
                 <div className='bg-yellowish w-[530px] rounded-r-xl'></div>
@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             {/* overlay bg */}
             <div className='absolute z-10'>
-                <img src={waves} alt='logo' className='w-full'/>
+                <img src={waves} alt='logo' className='w-full h-[90vh]'/>
             </div>
         </div >
     )
