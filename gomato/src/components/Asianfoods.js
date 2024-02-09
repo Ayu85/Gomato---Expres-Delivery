@@ -9,7 +9,7 @@ const Asianfoods = () => {
   return (
     <div>
       <Header />
-      <Heromedical name={'ASIAN FOODS'} bg={'https://as2.ftcdn.net/v2/jpg/02/64/00/51/1000_F_264005126_KflpWsRolKZQvZqDSh87UMELw5B8HYTR.jpg'} />
+      <Heromedical name={'ASIAN FOODS'} bg={'https://as1.ftcdn.net/v2/jpg/02/97/67/70/1000_F_297677001_zX7ZzRq8DObUV5IWTHAIhAae6DuiEQh4.jpg'} />
     </div>
   )
 }
