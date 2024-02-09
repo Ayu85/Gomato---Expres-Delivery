@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useDispatch } from 'react-redux'
-import { addItem } from '../../redux/slices/Cartslice'
+import { addItem, addPrice } from '../../redux/slices/Cartslice'
 const Productcard = ({ logo, product_name, price }) => {
     const dispatch = useDispatch()
     return (
@@ -11,6 +11,7 @@ const Productcard = ({ logo, product_name, price }) => {
             <div className='text-lg font-semibold text-gray'>💲{price}</div>
             <button onClick={() => {
                 dispatch(addItem({ 'name': product_name, 'price': price, 'logo': logo }))
+                dispatch(addPrice(price))
             }} className='bg_slider px-5 py-2 rounded-full'>Add To Cart</button>
         </motion.div >
     )

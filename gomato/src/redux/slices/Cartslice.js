@@ -9,9 +9,10 @@ const cart = createSlice({
     reducers: {
         addItem: (state, action) => {
             state.items.push(action.payload)
-            for (let i = 0; i < state.items.length; i++) {
-                state.totalPrice += state.items[i].price
-            }
+
+        },
+        addPrice: (state, action) => {
+            state.totalPrice += action.payload
         },
         removeItem: (state) => {
             state.items.pop()
@@ -22,5 +23,5 @@ const cart = createSlice({
 
     }
 })
-export const { addItem, removeItem, clearCart } = cart.actions;
+export const { addItem, removeItem, clearCart,addPrice } = cart.actions;
 export default cart.reducer;
