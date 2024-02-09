@@ -10,7 +10,7 @@ import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { toogleBar } from '../../redux/slices/Productslide'
 import { useNavigate } from 'react-router-dom'
 
-const Products = () => {
+const Products = ({products}) => {
   const currentIndex = useSelector(store => store.currentProductIndex.value)
   const barStatus = useSelector(store => store.productSlider.value)
   const dispatch = useDispatch();
@@ -59,7 +59,7 @@ const Products = () => {
         <div className='flex   justify-center items-center pt-10 gap-5 flex-wrap '>
           {/* products */}
           {
-            medicalSupplies[currentIndex].map((items) => {
+            products[currentIndex].map((items) => {
               return <Productcard product_name={items.product_name} logo={items.logo} price={items.price} />
             })
           }
