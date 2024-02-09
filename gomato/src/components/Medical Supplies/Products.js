@@ -69,7 +69,7 @@ const Products = ({products}) => {
       {/* ***************************************/}
       {/* side bar opening and closing */}
       {/* ***************************************/}
-      <div className={`absolute z-50 bg-ghee left-0 w-96 h-full ${!barStatus ? "-translate-x-[500px] transition-all duration-300" : "translate-x-0 transition-all duration-300"}`}>
+      <div className={`absolute z-50 bg-ghee left-0 w-96 h-full lg:hidden ${!barStatus ? "-translate-x-[500px] transition-all duration-300" : "translate-x-0 transition-all duration-300"}`}>
         <RxCross1 onClick={() => {
           dispatch(toogleBar())
         }} className='text-4xl ml-[50%] -translate-x-[50%] mt-6 -mb-4 cursor-pointer' />
