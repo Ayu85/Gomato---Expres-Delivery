@@ -3,12 +3,14 @@ import Hamburgerslice from './slices/Hamburgerslice';
 import Currentfooditem from './slices/Currentfooditem';
 import Currentproductindex from './slices/Currentproductindex'
 import Productslide from './slices/Productslide';
+import cart from './slices/Cartslice'
 const store = configureStore({
     reducer: {
         Hamburger: Hamburgerslice,
         currentitem: Currentfooditem,
         currentProductIndex: Currentproductindex,
-        productSlider: Productslide
+        productSlider: Productslide,
+        cartSlice: cart
     }
 })
 export default store;
