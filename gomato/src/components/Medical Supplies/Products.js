@@ -10,7 +10,7 @@ import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { toogleBar } from '../../redux/slices/Productslide'
 import { useNavigate } from 'react-router-dom'
 
-const Products = ({products}) => {
+const Products = ({ products }) => {
   const currentIndex = useSelector(store => store.currentProductIndex.value)
   const barStatus = useSelector(store => store.productSlider.value)
   const dispatch = useDispatch();
@@ -40,8 +40,10 @@ const Products = ({products}) => {
               <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vegeterian</li>
             </ul>
             <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
-            <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Raw Meat</li>
-            <ul className='font-semibold  text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Medical Supplies</ul>
+            <li className='font-semibold text-blackish flex items-center gap-1 '><MdNavigateNext className='text-yellowish font-bold text-lg' />Raw Meat</li>
+            <ul onClick={() => {
+              navigate('/medicalsupplies')
+            }} className='font-semibold  text-blackish flex items-center gap-1 cursor-pointer'><MdNavigateNext className='text-yellowish font-bold text-lg' />Medical Supplies</ul>
             <ul className='ml-8 text-sm -mt-2'>
               <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Antiseptic</li>
               <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Face Masks</li>
