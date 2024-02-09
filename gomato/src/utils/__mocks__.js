@@ -124,7 +124,7 @@ export const medicalSupplies = [
         }
     ]
 ]
-const waterDelivery = [
+export const waterDelivery = [
     {
         logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_05.jpg        ',
         product_name: 'Natural Aqua Bottles',
@@ -159,4 +159,38 @@ const waterDelivery = [
         product_name: ' Bottled Mineral Water',
         price: 35.36
     }
+]
+export const asianFood = [
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/sushi_08-1024x1024.jpg        ',
+        product_name: 'Salmon Roll',
+        price: 9.25
+    },
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/sushi_01-1024x1024.jpg        ',
+        product_name: 'Red Fish Roll',
+        price: 7.25
+    },
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/sushi_02-1024x1024.jpg        ',
+        product_name: 'Picklet Roll',
+        price: 9.5
+    },
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/sushi_05-1024x1024.jpg        ',
+        product_name: 'Roll With Crab',
+        price: 11.25
+    },
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/sushi_04-1024x1024.jpg        ',
+        product_name: 'Shrimp Roll',
+        price: 11.25
+    },
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/sushi_06-1024x1024.jpg        ',
+        product_name: 'Roll With Tuna',
+        price: 12.5
+    },
+
 ]
