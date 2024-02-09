@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react'
 import Header from './Header'
 import Heromedical from '../components/Medical Supplies/Heromedical'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import emptycart from '../assets/emptycart.png'
 import sad from '../assets/sad.png'
 import Footer from './Footer'
 import { useNavigate } from 'react-router-dom'
 import { MdDeleteForever } from "react-icons/md";
-
+import { clearCart } from '../redux/slices/Cartslice'
 const Cart = () => {
     const items = useSelector(store => store.cartSlice.items)
     const totalPrice = useSelector(store => store.cartSlice.totalPrice)
     const navigate = useNavigate()
+    const dispatch = useDispatch();
     useEffect(() => {
         document.title = 'Cart - GoMoto Delivery';
         if (items.length === 0) document.getElementById("checkoutbutton").disabled = true
@@ -49,7 +50,9 @@ const Cart = () => {
                         <div className=' '>
                             <h1 className='font-semibold'>TOTAL</h1>
                         </div>
-                        <div className='flex items-center gap-1 bg-[#ff2727] px-2 py-1 rounded-lg text-lg cursor-pointer active:scale-110 transition-all '>Clear Cart<MdDeleteForever className='text-2xl text-white' />
+                        <div onClick={() => {
+                            dispatch(clearCart())
+                        }} className='flex items-center gap-1 bg-[#ff2727] px-2 py-1 rounded-lg text-lg cursor-pointer active:scale-110 transition-all '>Clear Cart<MdDeleteForever className='text-2xl text-white' />
                         </div>
                         <div className='font-semibold text-yellowish text-xl '>$ {totalPrice}</div></div>
 
