@@ -136,15 +136,20 @@ const Header = () => {
                 <ul className='flex flex-col pl-5 list-none text-white text-xl gap-4 '>
                     <li onClick={() => {
                         navigate("/")
+                        dispatch(toogleHamburger())
                     }} className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
                     </li>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
                     </li>
                     <li onClick={() => {
                         navigate("/cart")
+                        dispatch(toogleHamburger())
                     }} className='flex items-center cursor-pointer hover:text-yellowish'>Cart<MdNavigateNext />
                     </li>
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
+                    <li onClick={() => {
+                        navigate("/asianfood")
+                        dispatch(toogleHamburger())
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>Shop<MdNavigateNext />
                     </li>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
