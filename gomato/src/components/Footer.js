@@ -26,7 +26,7 @@ const Footer = () => {
                 <CiInstagram />
             </div>
             {/* overlay bg */}
-            <div className='absolute z-10'>
+            <div className='absolute z-10 w-full'>
                 <img src={waves} alt='logo' className='w-full h-[90vh]'/>
             </div>
         </div >
