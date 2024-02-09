@@ -5,6 +5,7 @@ import store from "./redux/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Medicalsupplies from "./components/Medical Supplies/Medicalsupplies";
 import Asianfoods from "./components/Asianfoods";
+import User from './components/User'
 const approute = createBrowserRouter([
   {
     path: '/',
@@ -16,7 +17,11 @@ const approute = createBrowserRouter([
   },
   {
     path: '/asianfood',
-    element: <Asianfoods/>
+    element: <Asianfoods />
+  },
+  {
+    path: '/user',
+    element: <User />
   }
 ])
 function App() {

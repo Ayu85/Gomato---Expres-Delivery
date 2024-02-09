@@ -104,7 +104,9 @@ const Header = () => {
             <div className=' items-center gap-9 text-white hidden lg:flex'>
                 <div className='flex items-center gap-2 text-yellowish font-semibold'><PiPhoneCallFill className='text-white' />
                     +91-9005676379</div>
-                <div><FaUserAlt />
+                <div className='' onClick={()=>{
+                    navigate('/user')
+                }}><FaUserAlt />
                 </div>
                 <div><IoCart />
                 </div>
