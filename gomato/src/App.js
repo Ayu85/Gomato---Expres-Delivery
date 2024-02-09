@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Medicalsupplies from "./components/Medical Supplies/Medicalsupplies";
 import Asianfoods from "./components/Asianfoods";
 import User from './components/User'
+import Cart from "./components/Cart";
 const approute = createBrowserRouter([
   {
     path: '/',
@@ -22,6 +23,10 @@ const approute = createBrowserRouter([
   {
     path: '/user',
     element: <User />
+  },
+  {
+    path: '/cart',
+    element: <Cart />
   }
 ])
 function App() {
