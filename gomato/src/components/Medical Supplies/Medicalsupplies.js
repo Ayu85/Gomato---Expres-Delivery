@@ -6,6 +6,7 @@ import { FaSliders } from "react-icons/fa6";
 import { toogleBar } from '../../redux/slices/Productslide';
 import { useDispatch, useSelector } from 'react-redux';
 import { medicalSupplies } from '../../utils/__mocks__';
+import Footer from '../Footer';
 const Medicalsupplies = () => {
   const [title, setTitle] = useState('Medical Supplies - GoMoto')
   const barStatus = useSelector(store => store.productSlider.value)
@@ -22,6 +23,7 @@ const Medicalsupplies = () => {
         dispatch(toogleBar())
       }} className='absolute lg:hidden  left-0 z-[999] top-[50%] bg-yellowish rounded-r-full px-3 py-2 cursor-pointer'><FaSliders className='text-2xl' />
       </div>}
+      <Footer/>
     </div>
   )
 }

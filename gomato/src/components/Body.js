@@ -5,6 +5,7 @@ import Foodbuttons from './Foodbuttons'
 import Quickpick from './Quickpick Section/Quickpick'
 import Recommendation from './Recommendation'
 import PizzaAd from './PizzaAd'
+import Footer from './Footer'
     
 const Body = () => {
     return (
@@ -15,6 +16,7 @@ const Body = () => {
             <Quickpick />
             <Recommendation />
             <PizzaAd />
+            <Footer/>
         </div>
     )
 }
