@@ -25,9 +25,12 @@ const Footer = () => {
                 <FaLinkedinIn />
                 <CiInstagram />
             </div>
+            <div className='text-white py-5 absolute z-50 bottom-2 border-t border-gray border-dashed w-full text-center'>
+                <h1>©️ COPYRIGHT , ALL RIGHTS RESERVED , AAYUSH 2024!</h1>
+            </div>
             {/* overlay bg */}
             <div className='absolute z-10 w-full'>
-                <img src={waves} alt='logo' className='w-full h-[90vh]'/>
+                <img src={waves} alt='logo' className='w-full h-[90vh]' />
             </div>
         </div >
     )
