@@ -14,7 +14,7 @@ const Login = () => {
                 <div className=' bg-ghee mb-3 px-3 py-3 cursor-pointer rounded-full flex justify-center items-center gap-3'>
                     <FcPhone className='text-3xl' />
                 </div></div>
-            <form className='flex flex-col gap-5'>
+            <form className='flex flex-col gap-5 z-50'>
                 <input type='email' placeholder='Enter Email' className='lg:w-96 md:w-96 py-3 w-52 rounded-xl pl-3 text-gray outline-none' />
                 <input type='password' placeholder='Enter Password' className='lg:w-96 md:w-96 w-52 py-3 rounded-xl pl-3 text-gray outline-none' />
                 <button className='lg:w-96 md:w-96  w-52  bg_slider2 cursor-pointer font-semibold text-lg py-3 rounded-xl pl-3 text-blackish bg-yellowish outline-none'>Log In</button>
@@ -23,7 +23,7 @@ const Login = () => {
                 <h1>Not Registered Yet ? <span className='font-semibold text-yellowish'>Register Now </span></h1>
             </div>
             {/* overlay bg */}
-            <div className='absolute -z-10'>
+            <div className='absolute -z-50'>
                 <img src={waves} alt='logo' className='w-full h-[75vh]' />
             </div>
         </div>
