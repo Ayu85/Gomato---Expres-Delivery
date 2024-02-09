@@ -10,6 +10,7 @@ const User = () => {
     <div>
       <Header />
       <Heromedical name={"MY ACCOUNT"} bg={'https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} />
+      
     </div>
   )
 }
