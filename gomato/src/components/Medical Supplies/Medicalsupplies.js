@@ -15,7 +15,7 @@ const Medicalsupplies = () => {
   return (
     <div className='relative'>
       <Header />
-      <Heromedical />
+      <Heromedical name={'MEDICAL SUPPLIES'} bg={'https://img.freepik.com/free-photo/medicine-blue-background-flat-lay_23-2149341573.jpg'} />
       <Products />
       {!barStatus && <div onClick={() => {
         dispatch(toogleBar())
