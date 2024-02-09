@@ -6,8 +6,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { CiInstagram } from "react-icons/ci";
-import waves from '../assets/overlay-waves-white.png'
-
+import waves from '../assets/waves_white-15.png'
 const Footer = () => {
     return (
         <div className='bg-blackish flex flex-col justify-center items-center relative'>
