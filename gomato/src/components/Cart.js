@@ -6,6 +6,7 @@ import emptycart from '../assets/emptycart.png'
 import sad from '../assets/sad.png'
 const Cart = () => {
     const items = useSelector(store => store.cartSlice.items)
+    const totalPrice = useSelector(store => store.cartSlice.totalPrice)
     useEffect(() => {
         document.title = 'Cart - GoMoto Delivery'
     }, [])
@@ -15,7 +16,7 @@ const Cart = () => {
             <Heromedical name={"CART"} bg={'https://img.freepik.com/free-photo/black-friday-concept-with-cart-basket_23-2147696392.jpg?w=996&t=st=1707486962~exp=1707487562~hmac=46456e50b1e0c3bb8bd86ac5e23d31a988207edf53bc91904bede0fd721be5e8'} />
             <div className='flex justify-center items-center mt-20  '>
                 <div>
-                    <div className='flex items-center justify-center gap-5 bg-blackish text-white py-6 rounded-t-xl '>
+                    <div className='flex items-center justify-center px-10 gap-5 bg-blackish text-white py-6 rounded-t-xl '>
                         <div className=' '>
                             <h1 className='font-semibold'>PRODUCT</h1>
                         </div>
@@ -41,7 +42,7 @@ const Cart = () => {
                             <h1 className='font-semibold'>TOTAL</h1>
                         </div>
                       
-                        <div className='font-semibold text-yellowish '>${}</div></div>
+                        <div className='font-semibold text-yellowish text-xl '>$ {totalPrice}</div></div>
                 </div>
 
             </div>
