@@ -19,7 +19,9 @@ const Header = () => {
     const navigate = useNavigate();
     return (
         <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
-            <div>
+            <div onClick={() => {
+                navigate('/')
+            }} className='cursor-pointer'>
                 {/* logo box */}
                 <img src={logo} alt='logo' />
             </div>
@@ -77,7 +79,9 @@ const Header = () => {
                     }} onMouseLeave={() => {
                         setShowcatalog(false)
                     }} className='absolute flex flex-col cursor-pointer  text-sm font-semibold   top-9 z-50 left-32 rounded-xl bg-white text-blackish px-5  py-4'>
-                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Shop</li>
+                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 ' onClick={() => {
+                            navigate('/asianfood')
+                        }} >Shop</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Cart</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Checkout</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>My Account</li></div>
@@ -104,7 +108,7 @@ const Header = () => {
             <div className=' items-center gap-9 text-white hidden lg:flex'>
                 <div className='flex items-center gap-2 text-yellowish font-semibold'><PiPhoneCallFill className='text-white' />
                     +91-9005676379</div>
-                <div className='cursor-pointer hover:scale-110 transition-all' onClick={()=>{
+                <div className='cursor-pointer hover:scale-110 transition-all' onClick={() => {
                     navigate('/user')
                 }}><FaUserAlt />
                 </div>
