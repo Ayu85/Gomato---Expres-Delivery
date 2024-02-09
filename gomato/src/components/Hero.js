@@ -33,26 +33,7 @@ const Hero = () => {
                 <img src={courier} alt='logo' className={`md:w-[800px] mt-20 ${!showbike && "translate-x-[1000px] transition-all duration-1000"} ${showbike && "translate-x-[1px] transition-all duration-1000"}`} />
             </div>
             {/* this is absolute hamburger menu box */}
-            {<div className={`bg-[#000000] border-gray lg:hidden
-             backdrop-blur-sm filter  absolute top-0 w-full h-full ${!showHamburger && "-right-[1100px] transition-all duration-500"} ${showHamburger && "right-0 transition-all duration-500 backdrop-blur-sm filter"}`}>
-                {/* menus box */}
-                <div className='flex justify-between px-10 items-center py-7'>
-                    <img src={logo} alt='logo' />
-
-                </div>
-                <ul className='flex flex-col pl-5 list-none text-white text-xl gap-4 '>
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
-                    </li>
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
-                    </li>
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
-                    </li>
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
-                    </li>
-                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
-                    </li>
-                </ul>
-            </div>}
+        
             {/* this is bg of hero section ...is absolute */}
 
         </div>

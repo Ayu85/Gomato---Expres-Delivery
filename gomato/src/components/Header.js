@@ -18,7 +18,7 @@ const Header = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     return (
-        <div className='bg-blackish py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
+        <div className='bg-blackish relative py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
             <div onClick={() => {
                 navigate('/')
             }} className='cursor-pointer'>
@@ -124,7 +124,28 @@ const Header = () => {
                     dispatch(toogleHamburger())
                 }} />}
             </div>
-
+            {<div className={`bg-[#000000ad] border-gray lg:hidden
+             backdrop-blur-sm filter  absolute top-0 z-[99999] w-full h-[100vh] ${!showHamburger && "-right-[1100px] transition-all duration-500"} ${showHamburger && "right-0 transition-all duration-500 backdrop-blur-sm filter"}`}>
+                {/* menus box */}
+                <div className='flex justify-between px-10 items-center py-7'>
+                    <img src={logo} alt='logo' />
+                    <RxCross1 className='text-3xl text-white font-bold cursor-pointer' onClick={() => {
+                        dispatch(toogleHamburger())
+                    }} />
+                </div>
+                <ul className='flex flex-col pl-5 list-none text-white text-xl gap-4 '>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Home<MdNavigateNext />
+                    </li>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>About us<MdNavigateNext />
+                    </li>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Catalog<MdNavigateNext />
+                    </li>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Blog<MdNavigateNext />
+                    </li>
+                    <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
+                    </li>
+                </ul>
+            </div>}
         </div>
     )
 }
