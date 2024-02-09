@@ -28,15 +28,20 @@ const Cart = () => {
                                     <img src={product.logo} alt='logo' className='' />
                                 </div>
                                 <div className='font-semibold w-[300px] h-max '>{product.name}</div>
-                                <div className='font-semibold '>💲{product.price}</div>
+                                <div className='font-semibold text-yellowish'>💲{product.price}</div>
                             </div>
                         }) : <div className='flex flex-col gap-3 items-center justify-center'>
                             <img src={sad} alt='logo' className='w-52' />
                             <h1 className='text-3xl text-blackish font-semibold'>Cart empty</h1>
                             <img src={emptycart} alt='logo' className='w-72' />
-
                         </div>
                     }
+                    <div className='flex items-center justify-between px-10 gap-5 bg-blackish text-white py-6 rounded-b-xl '>
+                        <div className=' '>
+                            <h1 className='font-semibold'>TOTAL</h1>
+                        </div>
+                      
+                        <div className='font-semibold text-yellowish '>${}</div></div>
                 </div>
 
             </div>
