@@ -15,6 +15,7 @@ const Header = () => {
     const [showCatalog, setShowcatalog] = useState(false)
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
+    const cartItems = useSelector(store => store.cartSlice.items)
     const dispatch = useDispatch()
     const navigate = useNavigate();
     return (
@@ -112,9 +113,9 @@ const Header = () => {
                     navigate('/user')
                 }}><FaUserAlt />
                 </div>
-                <div className='cursor-pointer hover:scale-110 transition-all' onClick={() => {
+                <div className='cursor-pointer flex items-center gap-1 hover:scale-110 transition-all' onClick={() => {
                     navigate('/cart')
-                }}><IoCart />
+                }}><IoCart /><span className='bg-yellowish px-2 py-1 font-semibold text-sm text-blackish rounded-full'> {cartItems.length}</span>
                 </div>
             </div>
             <div className='flex sm:flex md:flex lg:hidden'>
@@ -124,6 +125,7 @@ const Header = () => {
                     dispatch(toogleHamburger())
                 }} />}
             </div>
+            {/* the side hambuger menu */}
             {<div className={`bg-[#000000ad] border-gray lg:hidden
              backdrop-blur-md   absolute top-0 z-[99999] w-full h-[100vh] ${!showHamburger && "-right-[1100px] transition-all duration-500"} ${showHamburger && "right-0 transition-all duration-500 backdrop-blur-sm filter"}`}>
                 {/* menus box */}
