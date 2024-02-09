@@ -22,7 +22,7 @@ const Cart = () => {
             <Heromedical name={"CART"} bg={'https://img.freepik.com/free-photo/black-friday-concept-with-cart-basket_23-2147696392.jpg?w=996&t=st=1707486962~exp=1707487562~hmac=46456e50b1e0c3bb8bd86ac5e23d31a988207edf53bc91904bede0fd721be5e8'} />
             <div className='flex flex-col gap-6 justify-center items-center mt-20  '>
                 <div>
-                    <div className='flex items-center justify-center px-10 gap-5 bg-blackish text-white py-6 rounded-t-xl '>
+                    <div className='flex items-center justify-center px-10 gap-5 bg-blackish text-white py-6 rounded-t-xl md:w-[550px] lg:w-[550px] w-[350px] '>
                         <div className=' '>
                             <h1 className='font-semibold'>PRODUCT</h1>
                         </div>
@@ -30,7 +30,7 @@ const Cart = () => {
                         <div className='font-semibold '>PRICE</div></div>
                     {
                         items.length !== 0 ? items.map((product) => {
-                            return <div className='flex  items-center justify-center gap-5 py-2 w-[550px] border border-[#c9c9c9] '>
+                            return <div className='flex  items-center justify-center gap-5 py-2 md:w-[550px] lg:w-[550px] w-[350px] border border-[#c9c9c9] '>
                                 <div className=' w-28 h-28'>
                                     <img src={product.logo} alt='logo' className='' />
                                 </div>
@@ -43,7 +43,7 @@ const Cart = () => {
                             <img src={emptycart} alt='logo' className='w-72' />
                         </div>
                     }
-                    <div className='flex items-center justify-between px-10 gap-5 bg-blackish text-white py-6 rounded-b-xl '>
+                    <div className='flex items-center justify-between px-10 gap-5 md:w-[550px] lg:w-[550px] w-[350px] bg-blackish text-white py-6 rounded-b-xl '>
                         <div className=' '>
                             <h1 className='font-semibold'>TOTAL</h1>
                         </div>
