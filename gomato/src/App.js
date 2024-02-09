@@ -7,6 +7,7 @@ import Medicalsupplies from "./components/Medical Supplies/Medicalsupplies";
 import Asianfoods from "./components/Asianfoods";
 import User from './components/User'
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 const approute = createBrowserRouter([
   {
     path: '/',
@@ -27,6 +28,10 @@ const approute = createBrowserRouter([
   {
     path: '/cart',
     element: <Cart />
+  },
+  {
+    path: '/checkout',
+    element: <Checkout />
   }
 ])
 function App() {

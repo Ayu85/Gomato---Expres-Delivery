@@ -5,10 +5,11 @@ import { useSelector } from 'react-redux'
 import emptycart from '../assets/emptycart.png'
 import sad from '../assets/sad.png'
 import Footer from './Footer'
+import { useNavigate } from 'react-router-dom'
 const Cart = () => {
     const items = useSelector(store => store.cartSlice.items)
     const totalPrice = useSelector(store => store.cartSlice.totalPrice)
-
+    const navigate = useNavigate()
     useEffect(() => {
         document.title = 'Cart - GoMoto Delivery';
         if (items.length === 0) document.getElementById("checkoutbutton").disabled = true
@@ -50,7 +51,9 @@ const Cart = () => {
                         <div className='font-semibold text-yellowish text-xl '>$ {totalPrice}</div></div>
 
                 </div>
-                <button className={` px-7 py-3 cursor-pointer rounded-xl mb-10 disabled:bg-gray disabled:cursor-not-allowed`} id='checkoutbutton'>Proceed To Checkout</button>
+                <button onClick={() => {
+                    navigate('/checkout')
+                }} className={` px-7 py-3 cursor-pointer rounded-xl mb-10 disabled:bg-gray disabled:cursor-not-allowed`} id='checkoutbutton'>Proceed To Checkout</button>
             </div>
             <Footer />
         </div>
