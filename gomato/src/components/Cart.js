@@ -23,7 +23,7 @@ const Cart = () => {
                         <div className='font-semibold '>PRICE</div></div>
                     {
                         items.length !== 0 ? items.map((product) => {
-                            return <div className='flex  items-center justify-center gap-5 w-[550px] border border-[#c9c9c9] '>
+                            return <div className='flex  items-center justify-center gap-5 py-2 w-[550px] border border-[#c9c9c9] '>
                                 <div className=' w-28 h-28'>
                                     <img src={product.logo} alt='logo' className='' />
                                 </div>
