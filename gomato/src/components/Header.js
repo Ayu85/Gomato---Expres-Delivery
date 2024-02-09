@@ -99,7 +99,7 @@ const Header = () => {
                     }
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
-                </ul>   
+                </ul>
             </div>
             <div className=' items-center gap-9 text-white hidden lg:flex'>
                 <div className='flex items-center gap-2 text-yellowish font-semibold'><PiPhoneCallFill className='text-white' />

@@ -5,7 +5,6 @@ import Products from './Products'
 import { FaSliders } from "react-icons/fa6";
 import { toogleBar } from '../../redux/slices/Productslide';
 import { useDispatch, useSelector } from 'react-redux';
-
 const Medicalsupplies = () => {
   const [title, setTitle] = useState('Medical Supplies - GoMoto')
   const barStatus = useSelector(store => store.productSlider.value)
