@@ -8,7 +8,7 @@ const Waterdelivery = () => {
     return (
         <div>
             <Header />
-            <Heromedical name='WATER DELIVERY' bg='https://images.pexels.com/photos/928854/pexels-photo-928854.jpeg?cs=srgb&dl=pexels-stephan-m%C3%BCller-928854.jpg&fm=jpg' />
+            <Heromedical name='WATER DELIVERY' bg='http://gomoto.like-themes.com/wp-content/uploads/2020/04/water-about-bg.jpg' />
             <Products products={waterDelivery} />
             <Footer/>
         </div>

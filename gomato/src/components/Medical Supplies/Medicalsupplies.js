@@ -17,7 +17,7 @@ const Medicalsupplies = () => {
   return (
     <div className='relative'>
       <Header />
-      <Heromedical name={'MEDICAL SUPPLIES'} bg={'https://img.freepik.com/free-photo/medicine-blue-background-flat-lay_23-2149341573.jpg'} />
+      <Heromedical name={'MEDICAL SUPPLIES'} bg={'http://gomoto.like-themes.com/wp-content/uploads/2020/05/medical-service-bg.jpg'} />
       <Products products={medicalSupplies}/>
       {!barStatus && <div onClick={() => {
         dispatch(toogleBar())

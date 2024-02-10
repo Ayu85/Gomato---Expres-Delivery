@@ -19,7 +19,7 @@ const Asianfoods = () => {
   return (
     <div className='relative'>
       <Header />
-      <Heromedical name={'ASIAN FOODS'} bg={'https://as1.ftcdn.net/v2/jpg/02/97/67/70/1000_F_297677001_zX7ZzRq8DObUV5IWTHAIhAae6DuiEQh4.jpg'} />
+      <Heromedical name={'ASIAN FOODS'} bg={'http://gomoto.like-themes.com/wp-content/uploads/2020/05/SLIDE_pizza_01.jpg'} />
       <Products products={asianFood} />
       {!barStatus && <div onClick={() => {
         dispatch(toogleBar())

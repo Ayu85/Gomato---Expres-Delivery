@@ -11,7 +11,7 @@ const Pizza = () => {
     return (
         <div>
             <Header />
-            <Heromedical name={'PIZZA'} bg={'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} />
+            <Heromedical name={'PIZZA'} bg={'http://gomoto.like-themes.com/wp-content/uploads/2020/05/SLIDE_pizza_02.jpg'} />
             <Products products={pizza}/>
             <Footer/>
         </div>
