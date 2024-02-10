@@ -125,7 +125,7 @@ export const medicalSupplies = [
     ]
 ]
 export const waterDelivery = [
-    {
+    [{
         logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_05.jpg        ',
         product_name: 'Natural Aqua Bottles',
         price: 11
@@ -158,7 +158,107 @@ export const waterDelivery = [
         logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
         product_name: ' Bottled Mineral Water',
         price: 35.36
-    }
+    }],
+    [{
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_05.jpg        ',
+        product_name: 'Natural Aqua Bottles',
+        price: 11
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_06.jpg        ',
+        product_name: 'Water Set',
+        price: 25.99
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_02.jpg        ',
+        product_name: 'Gomoto Mineral Water',
+        price: 12.22
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_03.jpg        ',
+        product_name: 'Bottled Water',
+        price: 18.22
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
+        product_name: ' Bottled Sparkling Water',
+        price: 25.36
+    },
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
+        product_name: ' Bottled Mineral Water',
+        price: 35.36
+    }], [{
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_05.jpg        ',
+        product_name: 'Natural Aqua Bottles',
+        price: 11
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_06.jpg        ',
+        product_name: 'Water Set',
+        price: 25.99
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_02.jpg        ',
+        product_name: 'Gomoto Mineral Water',
+        price: 12.22
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_03.jpg        ',
+        product_name: 'Bottled Water',
+        price: 18.22
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
+        product_name: ' Bottled Sparkling Water',
+        price: 25.36
+    },
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
+        product_name: ' Bottled Mineral Water',
+        price: 35.36
+    }], [{
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_05.jpg        ',
+        product_name: 'Natural Aqua Bottles',
+        price: 11
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_06.jpg        ',
+        product_name: 'Water Set',
+        price: 25.99
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_02.jpg        ',
+        product_name: 'Gomoto Mineral Water',
+        price: 12.22
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_03.jpg        ',
+        product_name: 'Bottled Water',
+        price: 18.22
+    },
+
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
+        product_name: ' Bottled Sparkling Water',
+        price: 25.36
+    },
+    {
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
+        product_name: ' Bottled Mineral Water',
+        price: 35.36
+    }]
 ]
 export const asianFood = [
 
