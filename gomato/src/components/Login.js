@@ -1,11 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FcGoogle } from "react-icons/fc";
 import { FcPhone } from "react-icons/fc";
 import waves from '../assets/overlay-waves-white.png'
+import validate from '../utils/validate';
 const Login = () => {
     const [isSignin, setSignin] = useState(false)
     const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
+    useEffect(() => {
+        console.log(validate(email, password));
+    }, [email, password])
     return (
         !isSignin ? <div className='flex transition-all duration-300 relative flex-col gap-6 px-10 rounded-xl mt-36 py-20 lg:w-[500px] md:w-[500px] w-[300px]  ml-[50%] -translate-x-[50%] items-center mb-20 bg-blackish text-white justify-center'>
             <h1 className='text-4xl font-semibold '>LOG IN</h1>
