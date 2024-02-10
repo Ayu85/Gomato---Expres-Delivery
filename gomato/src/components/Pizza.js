@@ -13,7 +13,6 @@ const Pizza = () => {
     useEffect(() => {
         document.title = 'Pizza Delivery - GoMoto'
         window.scrollTo(0,0)
-        
 
     }, [])
     return (
