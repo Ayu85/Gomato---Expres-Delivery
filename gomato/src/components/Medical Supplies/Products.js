@@ -39,7 +39,9 @@ const Products = ({ products }) => {
               <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Italian</li>
               <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vegeterian</li>
             </ul>
-            <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
+            <li onClick={()=>{
+              navigate("/waterdelivery")
+            }} className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
             <li className='font-semibold text-blackish flex items-center gap-1 '><MdNavigateNext className='text-yellowish font-bold text-lg' />Raw Meat</li>
             <ul onClick={() => {
               navigate('/medicalsupplies')
