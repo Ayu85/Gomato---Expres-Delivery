@@ -30,30 +30,30 @@ const Products = ({ products }) => {
           <ul className='flex flex-col gap-3 py-5'>
             <li onClick={() => {
               navigate('/asianfood')
-            }} className='font-semibold text-blackish flex items-center gap-1 cursor-pointer'><MdNavigateNext className='text-yellowish font-bold text-lg' />Asian Food</li>
-            <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fast Food</li>
-            <li className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Hot Pizza</li>
+            }} className='font-semibold  hover:text-yellowish  text-blackish flex items-center gap-1 cursor-pointer'><MdNavigateNext className='text-yellowish font-bold text-lg' />Asian Food</li>
+            <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fast Food</li>
+            <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Hot Pizza</li>
             <ul className='ml-8 text-sm -mt-2'>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Cheesy</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fish and Seafood</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Italian</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vegeterian</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Cheesy</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fish and Seafood</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Italian</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vegeterian</li>
             </ul>
             <li onClick={()=>{
               navigate("/waterdelivery")
-            }} className='font-semibold cursor-pointer text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
+            }} className='font-semibold cursor-pointer hover:text-yellowish text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
             <li className='font-semibold text-blackish flex items-center gap-1 '><MdNavigateNext className='text-yellowish font-bold text-lg' />Raw Meat</li>
             <ul onClick={() => {
               navigate('/medicalsupplies')
-            }} className='font-semibold  text-blackish flex items-center gap-1 cursor-pointer'><MdNavigateNext className='text-yellowish font-bold text-lg' />Medical Supplies</ul>
+            }} className='font-semibold hover:text-yellowish   text-blackish flex items-center gap-1 cursor-pointer'><MdNavigateNext className='text-yellowish font-bold text-lg' />Medical Supplies</ul>
             <ul className='ml-8 text-sm -mt-2'>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Antiseptic</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Face Masks</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Equipement</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Gloves</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Pills</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Latex Gloves</li>
-              <li className='font-semibold text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vitamins</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Antiseptic</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Face Masks</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Equipement</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Gloves</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Pills</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Latex Gloves</li>
+              <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vitamins</li>
             </ul>
           </ul>
         </div>
