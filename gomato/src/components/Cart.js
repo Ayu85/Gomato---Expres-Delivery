@@ -15,6 +15,7 @@ const Cart = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         document.title = 'Cart - GoMoto Delivery';
+        window.scrollTo(0,0)
         if (items.length === 0) document.getElementById("checkoutbutton").disabled = true
         else
             document.getElementById("checkoutbutton").classList.add("bg_slider")

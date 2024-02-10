@@ -15,6 +15,8 @@ const Asianfoods = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     document.title = title
+    window.scrollTo(0,0)
+
   }, [])
   return (
     <div className='relative'>

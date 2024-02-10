@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import Heromedical from '../components/Medical Supplies/Heromedical'
 import Products from './Medical Supplies/Products'
@@ -11,6 +11,10 @@ import { toogleBar } from '../redux/slices/Productslide'
 const Waterdelivery = () => {
     const barStatus = useSelector(store => store.productSlider.value)
     const dispatch = useDispatch();
+    useEffect(() => {
+        document.title = 'Water Delivery- GoMoto'
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className='relative'>
             <Header />

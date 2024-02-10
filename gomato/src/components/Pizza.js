@@ -12,6 +12,9 @@ const Pizza = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         document.title = 'Pizza Delivery - GoMoto'
+        window.scrollTo(0,0)
+        
+
     }, [])
     return (
         <div className='relative'>

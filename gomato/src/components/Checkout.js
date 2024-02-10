@@ -9,6 +9,7 @@ const Checkout = () => {
     const navigate = useNavigate();
     useEffect(() => {
         document.title = 'Checkout- GoMoto Delivery '
+        window.scrollTo(0,0)
         items.length === 0 && navigate('/asianfood')
     }, [])
     return (

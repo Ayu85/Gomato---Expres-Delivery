@@ -6,11 +6,19 @@
 
 * {
   font-family: "Rubik", sans-serif;
+  /* scroll-behavior: smooth; */
 
 }
 
 :root {
   /* background-color: #fafafa; */
+  /* scroll-behavior: smooth; */
+}
+
+html {
+
+  scroll-behavior: smooth;
+
 }
 
 .bg_slider {
