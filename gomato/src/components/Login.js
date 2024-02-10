@@ -4,7 +4,7 @@ import { FcPhone } from "react-icons/fc";
 import waves from '../assets/waves_white-15.png'
 import validate from '../utils/validate';
 import { auth } from '../firebase';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
     const [isSignin, setSignin] = useState(false)
@@ -30,6 +30,18 @@ const Login = () => {
                 // ..
             });
 
+    }
+    const loginUser = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
     }
     return (
         !isSignin ? <div className='flex transition-all duration-300 relative flex-col gap-6 px-10 rounded-xl mt-36 py-20 lg:w-[500px] md:w-[500px] w-[300px]  ml-[50%] -translate-x-[50%] items-center mb-20 bg-blackish text-white justify-center'>
