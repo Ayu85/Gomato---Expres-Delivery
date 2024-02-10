@@ -217,12 +217,12 @@ export const waterDelivery = [
     },
 
     {
-        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_04.jpg        ',
         product_name: ' Bottled Sparkling Water',
         price: 25.36
     },
     {
-        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_1.jpg        ',
+        logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/bottles_01.jpg        ',
         product_name: ' Bottled Mineral Water',
         price: 35.36
     }], [{
