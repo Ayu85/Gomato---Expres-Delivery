@@ -37,6 +37,8 @@ const AddressForm = () => {
 }
 const BillingDetails = () => {
     const items = useSelector(store => store.cartSlice.items)
+    const totalPrice = useSelector(store => store.cartSlice.totalPrice)
+
     return <div className='flex flex-col gap-3  w-full items-center h-full'>
         <h1 className='text-3xl text-blackish font-semibold pl-3'>Your Order</h1>
         <div className='flex border border-[#cfcfcf] w-[300px] justify-between px-2 text-lg bg-blackish text-white py-3 rounded-t-2xl'>
@@ -44,12 +46,16 @@ const BillingDetails = () => {
             <h1>Price</h1>
         </div>
         {items.map((prod) => {
-            return <div className='flex  border-[#cfcfcf] w-[300px] justify-between px-2 text-lg  py-3 '>
+            return <div className='flex border-l border-r border-[#cfcfcf] w-[300px] justify-between px-2 text-lg   '>
                 <h1 className='font-semibold'>{prod.name}</h1>
                 <h1 className='font-semibold'>💲{prod.price}</h1>
             </div>
         })
         }
+        <div className='flex border border-[#cfcfcf] w-[300px] justify-between px-2 text-lg bg-blackish text-white py-3 rounded-b-2xl'>
+            <h1 className='font-semibold'>Total: </h1>
+            <h1 className='font-semibold'>💲{totalPrice}</h1>
+        </div>
 
     </div>
 }
