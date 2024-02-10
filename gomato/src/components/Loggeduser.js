@@ -5,19 +5,21 @@ import { auth } from '../firebase'
 import { useNavigate } from 'react-router-dom';
 const Loggeduser = () => {
     const navigate = useNavigate()
-    signOut(auth).then(() => {
-        // Sign-out successful.
-        console.log("sign out")
-    }).catch((error) => {
-        // An error happened.
-    });
+    const logout = () => {
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            console.log("sign out")
+        }).catch((error) => {
+            // An error happened.
+        });
+    }
     return (
         <div>
             <Header />
             <div>
                 welcome user
                 <button onClick={() => {
-                    navigate('/user')
+                    logout()
                 }}>signout</button>
             </div>
         </div>

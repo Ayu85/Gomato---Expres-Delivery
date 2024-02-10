@@ -17,7 +17,7 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const cartItems = useSelector(store => store.cartSlice.items)
-    // console.log(auth);
+     console.log(auth);
     useEffect(() => {
         handleScroll()
 
@@ -127,7 +127,7 @@ const Header = () => {
                 <div className='flex items-center gap-2 text-yellowish font-semibold'><PiPhoneCallFill className='text-white' />
                     +91-9005676379</div>
                 <div className='cursor-pointer hover:scale-110 transition-all' onClick={() => {
-                    !auth.currentUser ? navigate('/loggeduser') : navigate('/user')
+                    auth.currentUser===null ? navigate('/user') : navigate('/loggeduser')
                 }}><FaUserAlt />
                 </div>
                 <div className='cursor-pointer flex items-center gap-1 hover:scale-110 transition-all' onClick={() => {
