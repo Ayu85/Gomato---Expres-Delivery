@@ -51,7 +51,9 @@ const Header = () => {
                         <li onClick={() => {
                             navigate('/asianfood')
                         }} className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Food Delivery</li>
-                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Water Delivery</li>
+                        <li onClick={() => {
+                            navigate('/waterdelivery')
+                        }} className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Water Delivery</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 ' onClick={() => {
                             navigate('/medicalsupplies')
                         }}>Medical Supplies</li>
