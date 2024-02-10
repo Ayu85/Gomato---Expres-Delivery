@@ -28,6 +28,7 @@ const Login = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 // ..
+                console.log(errorMessage);
             });
 
     }
@@ -37,6 +38,7 @@ const Login = () => {
                 // Signed in 
                 const user = userCredential.user;
                 // ...
+                console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -64,7 +66,10 @@ const Login = () => {
                 }} type='password' placeholder='Enter Password' className='lg:w-96 md:w-96 w-52 py-3 rounded-xl pl-3 text-gray outline-none' />
                 <h1 className='text-[#ff3232] -mt-4 pl-3 transition-all'>{passError && 'Enter Valid Password'}</h1>
 
-                <button className='lg:w-96 md:w-96  w-52  bg_slider2 cursor-pointer font-semibold text-lg py-3 rounded-xl pl-3 text-blackish bg-yellowish outline-none'>Log In</button>
+                <button onClick={(e) => {
+                    e.preventDefault();
+                    loginUser(email, password)
+                }} className='lg:w-96 md:w-96  w-52  bg_slider2 cursor-pointer font-semibold text-lg py-3 rounded-xl pl-3 text-blackish bg-yellowish outline-none'>Log In</button>
             </form>
             <div className='text-center'>
                 <h1>Not Registered Yet ? <span className='font-semibold cursor-pointer text-yellowish' onClick={() => {
@@ -88,9 +93,17 @@ const Login = () => {
                     </div></div>
                 <form className='flex flex-col gap-5 z-50'>
                     <input type='text' placeholder='Enter Name' className='lg:w-96 md:w-96 py-3 w-52 rounded-xl pl-3 text-gray outline-none' />
-                    <input type='email' placeholder='Enter Email' className='lg:w-96 md:w-96 py-3 w-52 rounded-xl pl-3 text-gray outline-none' />
-                    <input type='password' placeholder='Enter Password' className='lg:w-96 md:w-96 w-52 py-3 rounded-xl pl-3 text-gray outline-none' />
-                    <button className='lg:w-96 md:w-96  w-52  bg_slider2 cursor-pointer font-semibold text-lg py-3 rounded-xl pl-3 text-blackish bg-yellowish outline-none'>Sign In</button>
+                    <input onChange={(e) => {
+                        setEmail(e.target.value)
+                    }} type='email' placeholder='Enter Email' className='lg:w-96 md:w-96 py-3 w-52 rounded-xl pl-3 text-gray outline-none' />
+                    <h1 className='text-[#ff3232] -mt-4 pl-3 transition-all'>{mailError && 'Enter Valid Email'}</h1>
+                    <input onChange={(e) => {
+                        setPassword(e.target.value)
+                    }} type='password' placeholder='Enter Password' className='lg:w-96 md:w-96 w-52 py-3 rounded-xl pl-3 text-gray outline-none' />
+                    <h1 className='text-[#ff3232] -mt-4 pl-3 transition-all'>{passError && 'Enter Valid Password'}</h1>
+                    <button onClick={(e) => {
+                        e.preventDefault(); signUpUser(email, password)
+                    }} className='lg:w-96 md:w-96  w-52  bg_slider2 cursor-pointer font-semibold text-lg py-3 rounded-xl pl-3 text-blackish bg-yellowish outline-none'>Sign In</button>
                 </form>
                 <div className='text-center'>
                     <h1>Already Registered? <span className='font-semibold cursor-pointer text-yellowish' onClick={() => {
