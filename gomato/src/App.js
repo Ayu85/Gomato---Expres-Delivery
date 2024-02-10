@@ -10,6 +10,7 @@ import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Waterdelivery from "./components/Waterdelivery";
 import Pizza from "./components/Pizza";
+import LocomotiveScroll from 'locomotive-scroll'
 const approute = createBrowserRouter([
   {
     path: '/',
@@ -45,6 +46,7 @@ const approute = createBrowserRouter([
   }
 ])
 function App() {
+  const locomotiveScroll = new LocomotiveScroll()
   return (
     <Provider store={store}>
       <RouterProvider router={approute} />
