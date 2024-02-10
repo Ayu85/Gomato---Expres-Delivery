@@ -419,6 +419,11 @@ export const pizza = [
             product_name: "Pizza With Permesan",
             price: 14.56
         },
+        {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_07-1024x1024.jpg            ',
+            product_name: 'Assorted Pizza',
+            price: 15.3
+        }
 
     ],
     [
@@ -444,7 +449,11 @@ export const pizza = [
             logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_02-1024x1024.jpg            ",
             product_name: "Pizza With Permesan",
             price: 14.56
-        },
+        }, {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_07-1024x1024.jpg            ',
+            product_name: 'Assorted Pizza',
+            price: 15.3
+        }
 
     ],
     [
@@ -470,7 +479,11 @@ export const pizza = [
             logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_02-1024x1024.jpg            ",
             product_name: "Pizza With Permesan",
             price: 14.56
-        },
+        }, {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_07-1024x1024.jpg            ',
+            product_name: 'Assorted Pizza',
+            price: 15.3
+        }
 
     ],
     [
@@ -496,7 +509,11 @@ export const pizza = [
             logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_02-1024x1024.jpg            ",
             product_name: "Pizza With Permesan",
             price: 14.56
-        },
+        }, {
+            logo: 'http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_07-1024x1024.jpg            ',
+            product_name: 'Assorted Pizza',
+            price: 15.3
+        }
 
     ],
 ]

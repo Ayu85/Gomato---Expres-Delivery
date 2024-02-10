@@ -54,7 +54,7 @@ const Cart = () => {
                             dispatch(clearCart())
                         }} className='flex items-center gap-1 bg-[#ff2727] px-2 py-1 rounded-lg text-lg cursor-pointer active:scale-110 transition-all '>Clear Cart<MdDeleteForever className='text-2xl text-white' />
                         </div>
-                        <div className='font-semibold text-yellowish text-xl '>$ {totalPrice}</div></div>
+                        <div className='font-semibold text-yellowish text-xl '>$ {totalPrice.toFixed(2)}</div></div>
 
                 </div>
                 <button onClick={() => {
