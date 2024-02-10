@@ -20,6 +20,7 @@ const Loggeduser = () => {
                 welcome user
                 <button onClick={() => {
                     logout()
+                    navigate('/user')
                 }}>signout</button>
             </div>
         </div>
