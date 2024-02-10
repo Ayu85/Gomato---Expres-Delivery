@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from "../assets/logo.png"
 import { PiPhoneCallFill } from "react-icons/pi";
 import { FaUserAlt } from "react-icons/fa";
@@ -16,8 +16,15 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const cartItems = useSelector(store => store.cartSlice.items)
+    useEffect(()=> {
+        handleScroll()
+    }, [showHamburger])
     const dispatch = useDispatch()
     const navigate = useNavigate();
+    const handleScroll = () => {
+        showHamburger ? document.getElementsByTagName('body')[0].style.overflowY = 'hidden' : document.getElementsByTagName('body')[0].style.overflowY = 'visible'
+    }
+
     return (
         <div className='bg-blackish relative py-6 px-5 flex justify-between items-center text-lg border-b border-dashed border-gray'>
             <div onClick={() => {
