@@ -11,6 +11,7 @@ import Checkout from "./components/Checkout";
 import Waterdelivery from "./components/Waterdelivery";
 import Pizza from "./components/Pizza";
 import LocomotiveScroll from 'locomotive-scroll'
+import Loggeduser from "./components/Loggeduser";
 const approute = createBrowserRouter([
   {
     path: '/',
@@ -43,6 +44,10 @@ const approute = createBrowserRouter([
   {
     path: '/pizza',
     element: <Pizza />
+  },
+  {
+    path:'/loggeduser',
+    element:<Loggeduser/>
   }
 ])
 function App() {
