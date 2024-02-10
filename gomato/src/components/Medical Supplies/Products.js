@@ -32,14 +32,16 @@ const Products = ({ products }) => {
               navigate('/asianfood')
             }} className='font-semibold  hover:text-yellowish  text-blackish flex items-center gap-1 cursor-pointer'><MdNavigateNext className='text-yellowish font-bold text-lg' />Asian Food</li>
             <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fast Food</li>
-            <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Hot Pizza</li>
+            <li onClick={() => {
+              navigate('/pizza')
+            }} className='font-semibold hover:text-yellowish cursor-pointer text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Hot Pizza</li>
             <ul className='ml-8 text-sm -mt-2'>
               <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Cheesy</li>
               <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Fish and Seafood</li>
               <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Italian</li>
               <li className='font-semibold hover:text-yellowish cursor-pointer text-blackish my-2 flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Vegeterian</li>
             </ul>
-            <li onClick={()=>{
+            <li onClick={() => {
               navigate("/waterdelivery")
             }} className='font-semibold cursor-pointer hover:text-yellowish text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
             <li className='font-semibold text-blackish flex items-center gap-1 '><MdNavigateNext className='text-yellowish font-bold text-lg' />Raw Meat</li>

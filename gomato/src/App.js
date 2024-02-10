@@ -9,6 +9,7 @@ import User from './components/User'
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Waterdelivery from "./components/Waterdelivery";
+import Pizza from "./components/Pizza";
 const approute = createBrowserRouter([
   {
     path: '/',
@@ -37,6 +38,10 @@ const approute = createBrowserRouter([
   {
     path: '/waterdelivery',
     element: <Waterdelivery />
+  },
+  {
+    path: '/pizza',
+    element: <Pizza />
   }
 ])
 function App() {
