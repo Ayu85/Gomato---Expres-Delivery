@@ -18,7 +18,7 @@ const Waterdelivery = () => {
             <Products products={waterDelivery} />
             {!barStatus && <div onClick={() => {
                 dispatch(toogleBar())
-            }} className='absolute lg:hidden  left-0 z-[999] top-[50%] bg-yellowish rounded-r-full px-3 py-2 cursor-pointer'><FaSliders className='text-2xl' />
+            }} className='absolute lg:hidden  left-0 z-[999] top-[30%] bg-yellowish rounded-r-full px-3 py-2 cursor-pointer'><FaSliders className='text-2xl' />
             </div>}
             <Footer />
         </div>

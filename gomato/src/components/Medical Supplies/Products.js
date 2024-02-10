@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { medicalSupplies } from "../../utils/__mocks__"
 import Productcard from './Productcard'
 import { useDispatch, useSelector } from 'react-redux'
@@ -15,6 +15,9 @@ const Products = ({ products }) => {
   const barStatus = useSelector(store => store.productSlider.value)
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // useEffect(() => {
+  //   barStatus ? document.getElementsByTagName("body")[0].style.overflow = 'hidden' : document.getElementsByTagName("body")[0].style.overflow = 'visible'
+  // }, [barStatus])
   return (
     <div className={`flex px-6 relative  pt-12`}  >
       {/* category section */}
@@ -75,7 +78,7 @@ const Products = ({ products }) => {
       {/* ***************************************/}
       {/* side bar opening and closing */}
       {/* ***************************************/}
-      <div className={`absolute z-[99999999] bg-ghee left-0 w-96 h-full lg:hidden ${!barStatus ? "-translate-x-[500px] transition-all duration-300" : "translate-x-0 transition-all duration-300"}`}>
+      <div className={`absolute z-[99999999] bg-ghee left-0  h-full w-screen lg:hidden ${!barStatus ? "-translate-x-[1000px] transition-all duration-300" : "translate-x-0 transition-all duration-300"}`}>
         <RxCross1 onClick={() => {
           dispatch(toogleBar())
         }} className='text-4xl ml-[50%] -translate-x-[50%] mt-6 -mb-4 cursor-pointer' />
