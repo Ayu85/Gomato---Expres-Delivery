@@ -18,8 +18,12 @@ const Login = () => {
                     <FcPhone className='text-3xl' />
                 </div></div>
             <form className='flex flex-col gap-5 z-50'>
-                <input type='email' placeholder='Enter Email' className='lg:w-96 md:w-96 py-3 w-52 rounded-xl pl-3 text-gray outline-none' />
-                <input type='password' placeholder='Enter Password' className='lg:w-96 md:w-96 w-52 py-3 rounded-xl pl-3 text-gray outline-none' />
+                <input onChange={(e) => {
+                    setEmail(e.target.value)
+                }} type='email' placeholder='Enter Email' className='lg:w-96 md:w-96 py-3 w-52 rounded-xl pl-3 text-gray outline-none' />
+                <input onChange={(e) => {
+                    setPassword(e.target.value)
+                }} type='password' placeholder='Enter Password' className='lg:w-96 md:w-96 w-52 py-3 rounded-xl pl-3 text-gray outline-none' />
                 <button className='lg:w-96 md:w-96  w-52  bg_slider2 cursor-pointer font-semibold text-lg py-3 rounded-xl pl-3 text-blackish bg-yellowish outline-none'>Log In</button>
             </form>
             <div className='text-center'>
