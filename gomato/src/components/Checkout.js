@@ -2,12 +2,14 @@ import React, { useEffect } from 'react'
 import Header from './Header'
 import Heromedical from './Medical Supplies/Heromedical'
 import { useSelector } from 'react-redux'
-
+import Footer from '../components/Footer'
+import { useNavigate } from 'react-router-dom'
 const Checkout = () => {
     const items = useSelector(store => store.cartSlice.items)
-
+    const navigate = useNavigate();
     useEffect(() => {
         document.title = 'Checkout- GoMoto Delivery '
+        items.length === 0 && navigate('/asianfood')
     }, [])
     return (
         <div>
@@ -17,6 +19,8 @@ const Checkout = () => {
                 <AddressForm />
                 <BillingDetails />
             </div>
+            <Footer />
+
         </div>
     )
 }
@@ -54,9 +58,8 @@ const BillingDetails = () => {
         }
         <div className='flex border border-[#cfcfcf] w-[300px] justify-between px-2 text-lg bg-blackish text-white py-3 rounded-b-2xl'>
             <h1 className='font-semibold'>Total: </h1>
-            <h1 className='font-semibold'>💲{totalPrice}</h1>
+            <h1 className='font-semibold'>💲{totalPrice.toFixed(2)}</h1>
         </div>
-
     </div>
 }
 export default Checkout
