@@ -7,8 +7,12 @@ const Login = () => {
     const [isSignin, setSignin] = useState(false)
     const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
+    const [mailError, setMailError] = useState(true)
+    const [passError, setPassError] = useState(true)
     useEffect(() => {
-        console.log(validate(email, password));
+        let error = (validate(email, password));
+        setMailError(error[0])
+        setPassError(error[1])
     }, [email, password])
     return (
         !isSignin ? <div className='flex transition-all duration-300 relative flex-col gap-6 px-10 rounded-xl mt-36 py-20 lg:w-[500px] md:w-[500px] w-[300px]  ml-[50%] -translate-x-[50%] items-center mb-20 bg-blackish text-white justify-center'>
@@ -25,11 +29,11 @@ const Login = () => {
                 <input onChange={(e) => {
                     setEmail(e.target.value)
                 }} type='email' placeholder='Enter Email' className='lg:w-96 md:w-96 py-3 w-52 rounded-xl pl-3 text-gray outline-none' />
-                <h1 className='text-[#ff3232] -mt-4 pl-3'>Enter Valid Email</h1>
+                <h1 className='text-[#ff3232] -mt-4 pl-3'>{mailError && 'Enter Valid Email'}</h1>
                 <input onChange={(e) => {
                     setPassword(e.target.value)
                 }} type='password' placeholder='Enter Password' className='lg:w-96 md:w-96 w-52 py-3 rounded-xl pl-3 text-gray outline-none' />
-                <h1 className='text-[#ff3232] -mt-4 pl-3'>Enter Valid Password</h1>
+                <h1 className='text-[#ff3232] -mt-4 pl-3'>{passError && 'Enter Valid Password'}</h1>
 
                 <button className='lg:w-96 md:w-96  w-52  bg_slider2 cursor-pointer font-semibold text-lg py-3 rounded-xl pl-3 text-blackish bg-yellowish outline-none'>Log In</button>
             </form>
