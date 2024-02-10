@@ -5,7 +5,7 @@ const Waterdelivery = () => {
   return (
     <div>
       <Header/>
-      <Heromedical name='WATER DELIVERY' bg='https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=600'/>
+      <Heromedical name='WATER DELIVERY' bg='https://images.pexels.com/photos/928854/pexels-photo-928854.jpeg?cs=srgb&dl=pexels-stephan-m%C3%BCller-928854.jpg&fm=jpg'/>
     </div>
   )
 }

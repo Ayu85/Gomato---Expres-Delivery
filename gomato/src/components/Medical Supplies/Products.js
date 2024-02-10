@@ -41,7 +41,7 @@ const Products = ({ products }) => {
             </ul>
             <li onClick={()=>{
               navigate("/waterdelivery")
-            }} className='font-semibold text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
+            }} className='font-semibold cursor-pointer text-blackish flex items-center gap-1'><MdNavigateNext className='text-yellowish font-bold text-lg' />Water Delivery</li>
             <li className='font-semibold text-blackish flex items-center gap-1 '><MdNavigateNext className='text-yellowish font-bold text-lg' />Raw Meat</li>
             <ul onClick={() => {
               navigate('/medicalsupplies')
