@@ -18,7 +18,7 @@ const Login = () => {
     const dispatch = useDispatch()
     const navigate=useNavigate()
     const user = useSelector(store => store.userSlice.user)
-    console.log(user);
+    // console.log(user);
     useEffect(() => {
         let error = (validate(email, password));
         setMailError(error[0])

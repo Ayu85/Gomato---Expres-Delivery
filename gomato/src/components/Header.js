@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toogleHamburger } from '../redux/slices/Hamburgerslice';
 import { IoChevronDown } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom'
+import { auth } from '../firebase'
 const Header = () => {
     const [showHome, setShowhome] = useState(false)
     const [showAbout, setShowabout] = useState(false)
@@ -16,11 +17,14 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const cartItems = useSelector(store => store.cartSlice.items)
+    // console.log(auth);
     useEffect(() => {
         handleScroll()
+
     }, [showHamburger])
     const dispatch = useDispatch()
     const navigate = useNavigate();
+    const user = useSelector(store => store.userSlice.user)
     const handleScroll = () => {
         showHamburger ? document.getElementsByTagName('body')[0].style.overflowY = 'hidden' : document.getElementsByTagName('body')[0].style.overflowY = 'visible'
     }
@@ -94,7 +98,7 @@ const Header = () => {
                         setShowcatalog(false)
                     }} className='absolute flex flex-col cursor-pointer  text-sm font-semibold   top-9 z-50 left-32 rounded-xl bg-white text-blackish px-5  py-4'>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 ' onClick={() => {
-                            navigate('/asianfood')
+                            !user ? navigate('/asianfood') : navigate('/loggeduser')
                         }} >Shop</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Cart</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Checkout</li>
@@ -123,7 +127,7 @@ const Header = () => {
                 <div className='flex items-center gap-2 text-yellowish font-semibold'><PiPhoneCallFill className='text-white' />
                     +91-9005676379</div>
                 <div className='cursor-pointer hover:scale-110 transition-all' onClick={() => {
-                    navigate('/user')
+                    !auth.currentUser ? navigate('/loggeduser') : navigate('/user')
                 }}><FaUserAlt />
                 </div>
                 <div className='cursor-pointer flex items-center gap-1 hover:scale-110 transition-all' onClick={() => {
