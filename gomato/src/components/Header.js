@@ -16,7 +16,7 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const cartItems = useSelector(store => store.cartSlice.items)
-    useEffect(()=> {
+    useEffect(() => {
         handleScroll()
     }, [showHamburger])
     const dispatch = useDispatch()
@@ -48,7 +48,9 @@ const Header = () => {
                     }} onMouseLeave={() => {
                         setShowhome(false)
                     }} className={`${!showHome && "opacity-0 transition-all duration-500"} ${showHome && "opacity-100 transition-all duration-500"} absolute z-50 list-none flex flex-col  text-sm font-semibold top-9 cursor-pointer  -left-14 rounded-xl bg-white text-blackish px-5  py-4`}>
-                        <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Food Delivery</li>
+                        <li onClick={() => {
+                            navigate('/asianfood')
+                        }} className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Food Delivery</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Water Delivery</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 ' onClick={() => {
                             navigate('/medicalsupplies')
