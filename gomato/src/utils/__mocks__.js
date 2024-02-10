@@ -394,3 +394,109 @@ export const asianFood = [
     ]
 
 ]
+export const pizza = [
+    [
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_04-1024x1024.jpg        ",
+            product_name: "Thin Cheese Pizza",
+            price: 9.56
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_05-1024x1024.jpg            ",
+            product_name: "Pizza With Mushrooms",
+            price: 12.56
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_08-1024x1024.jpg            ",
+            product_name: "Pizza With Muselle",
+            price: 9.5
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_02-1024x1024.jpg            ",
+            product_name: "Pizza With Permesan",
+            price: 14.56
+        },
+
+    ],
+    [
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_04-1024x1024.jpg        ",
+            product_name: "Thin Cheese Pizza",
+            price: 9.56
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_05-1024x1024.jpg            ",
+            product_name: "Pizza With Mushrooms",
+            price: 12.56
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_08-1024x1024.jpg            ",
+            product_name: "Pizza With Muselle",
+            price: 9.5
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_02-1024x1024.jpg            ",
+            product_name: "Pizza With Permesan",
+            price: 14.56
+        },
+
+    ],
+    [
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_04-1024x1024.jpg        ",
+            product_name: "Thin Cheese Pizza",
+            price: 9.56
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_05-1024x1024.jpg            ",
+            product_name: "Pizza With Mushrooms",
+            price: 12.56
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_08-1024x1024.jpg            ",
+            product_name: "Pizza With Muselle",
+            price: 9.5
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_02-1024x1024.jpg            ",
+            product_name: "Pizza With Permesan",
+            price: 14.56
+        },
+
+    ],
+    [
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_04-1024x1024.jpg        ",
+            product_name: "Thin Cheese Pizza",
+            price: 9.56
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_05-1024x1024.jpg            ",
+            product_name: "Pizza With Mushrooms",
+            price: 12.56
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_08-1024x1024.jpg            ",
+            product_name: "Pizza With Muselle",
+            price: 9.5
+        },
+
+        {
+            logo: "http://gomoto.like-themes.com/wp-content/uploads/2019/06/pizza_02-1024x1024.jpg            ",
+            product_name: "Pizza With Permesan",
+            price: 14.56
+        },
+
+    ],
+]
