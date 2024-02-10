@@ -20,15 +20,24 @@ const AddressForm = () => {
     return <div className='flex flex-col gap-3 w-[800px] my-10'>
         <h1 className='text-3xl text-blackish font-semibold pl-3'>Billing Details</h1>
         <div className='flex w-full gap-3'>
-            <input type='text' placeholder='Enter First Name '  className='border border-gray py-5 w-[400px] rounded-full pl-2'/>
-            <input type='text' placeholder='Enter Last Name ' className='border border-gray py-5 w-[400px] rounded-full pl-2'/>
+            <input type='text' placeholder='Enter First Name ' className='border border-[#cfcfcf] py-5 w-[400px] rounded-full pl-2' />
+            <input type='text' placeholder='Enter Last Name ' className='border border-[#cfcfcf] py-5 w-[400px] rounded-full pl-2' />
         </div>
 
-        <input type='text' placeholder='Enter Full Address' className='border border-gray py-5 w-full rounded-full pl-2'/>
-        <input type='text' placeholder='Enter Landmark' className='border border-gray py-5 w-full rounded-full pl-2'/>
-        <input type='text' placeholder='Enter Town/City' className='border border-gray py-5 w-full rounded-full pl-2'/>
-        <input type='text' placeholder='Enter Pin Code' className='border border-gray py-5 w-full rounded-full pl-2'/>
+        <input type='text' placeholder='Enter Full Address' className='border border-[#cfcfcf] py-5 w-full rounded-full pl-2' />
+        <input type='text' placeholder='Enter Landmark' className='border border-[#cfcfcf] py-5 w-full rounded-full pl-2' />
+        <input type='text' placeholder='Enter Town/City' className='border border-[#cfcfcf] py-5 w-full rounded-full pl-2' />
+        <input type='text' placeholder='Enter Pin Code' className='border border-[#cfcfcf] py-5 w-full rounded-full pl-2' />
 
+    </div>
+}
+const BillingDetails = () => {
+    return <div className='flex flex-col gap-3'>
+        <h1 className='text-3xl text-blackish font-semibold pl-3'>Your Order</h1>
+        <div className='flex border border-[#cfcfcf]'>
+            <h1>Name</h1>
+            <h1>Price</h1>
+        </div>
     </div>
 }
 export default Checkout
