@@ -17,7 +17,7 @@ const Checkout = () => {
     )
 }
 const AddressForm = () => {
-    return <div className='flex flex-col gap-3 w-[800px] '>
+    return <div className='flex flex-col gap-3 w-[800px] my-10'>
         <h1 className='text-3xl text-blackish font-semibold pl-3'>Billing Details</h1>
         <div className='flex w-full gap-3'>
             <input type='text' placeholder='Enter First Name '  className='border border-gray py-5 w-[400px] rounded-full pl-2'/>
