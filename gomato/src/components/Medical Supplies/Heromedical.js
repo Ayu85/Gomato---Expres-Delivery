@@ -3,7 +3,7 @@ import { FaBriefcaseMedical } from "react-icons/fa";
 
 const Heromedical = ({ name, bg }) => {
   return (
-    <div className='lg:h-[90vh] md:h-[90vh] h-[50vh] relative w-screen '>
+    <div  className='lg:h-[90vh] md:h-[90vh] h-[50vh] relative w-screen '>
       <div className='z-10 absolute w-full'>
         <img src={bg}
           alt='logo' className='w-fulllg:h-[90vh] md:h-[90vh] h-[50vh] w-screen brightness-50 bg-fixed' />
