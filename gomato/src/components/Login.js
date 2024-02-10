@@ -5,6 +5,8 @@ import waves from '../assets/waves_white-15.png'
 import validate from '../utils/validate';
 import { auth } from '../firebase';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { useDispatch } from 'react-redux';
+import { addUser } from '../redux/slices/Userslice';
 
 const Login = () => {
     const [isSignin, setSignin] = useState(false)
@@ -12,6 +14,7 @@ const Login = () => {
     const [password, setPassword] = useState(null)
     const [mailError, setMailError] = useState()
     const [passError, setPassError] = useState()
+    const dispatch = useDispatch()
     useEffect(() => {
         let error = (validate(email, password));
         setMailError(error[0])
@@ -37,8 +40,8 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
+                dispatch(addUser(user))
                 // ...
-                console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
