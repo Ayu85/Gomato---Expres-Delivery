@@ -18,7 +18,7 @@ const Cart = () => {
         if (items.length === 0) document.getElementById("checkoutbutton").disabled = true
         else
             document.getElementById("checkoutbutton").classList.add("bg_slider")
-    }, [])
+    }, [items])
     return (
         <div>
             <Header />
@@ -58,7 +58,7 @@ const Cart = () => {
 
                 </div>
                 <button onClick={() => {
-                    navigate('/checkout')
+                    items.length !== 0 && navigate('/checkout')
                 }} className={` px-7 py-3 cursor-pointer rounded-xl mb-10 disabled:bg-gray disabled:cursor-not-allowed`} id='checkoutbutton'>Proceed To Checkout</button>
             </div>
             <Footer />
