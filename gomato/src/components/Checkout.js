@@ -16,7 +16,7 @@ const Checkout = () => {
         <div>
             <Header />
             <Heromedical name={'CHECKOUT'} bg={'https://images.pexels.com/photos/6289028/pexels-photo-6289028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} />
-            <div className='flex flex-wrap lg:flex-nowrap justify-between px-2 items-start my-10 gap-10 h-[58vh]'>
+            <div className='flex bg-white py-14 flex-wrap lg:flex-nowrap justify-between px-2 items-start  gap-10 '>
                 <AddressForm />
                 <BillingDetails />
             </div>

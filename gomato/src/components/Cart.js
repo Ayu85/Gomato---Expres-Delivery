@@ -24,7 +24,7 @@ const Cart = () => {
         <div>
             <Header />
             <Heromedical name={"CART"} bg={'https://img.freepik.com/free-photo/black-friday-concept-with-cart-basket_23-2147696392.jpg?w=996&t=st=1707486962~exp=1707487562~hmac=46456e50b1e0c3bb8bd86ac5e23d31a988207edf53bc91904bede0fd721be5e8'} />
-            <div className='flex flex-col gap-6 justify-center items-center mt-20  '>
+            <div className='flex flex-col gap-6 justify-center items-center mt-20  bg-white py-10'>
                 <div>
                     <div className='flex items-center justify-center px-10 gap-5 bg-blackish text-white py-6 rounded-t-xl md:w-[550px] lg:w-[550px] w-[350px] '>
                         <div className=' '>
