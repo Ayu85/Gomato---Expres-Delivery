@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FcGoogle } from "react-icons/fc";
 import { FcPhone } from "react-icons/fc";
 import waves from '../assets/waves_white-15.png'
 import validate from '../utils/validate';
 import { auth } from '../firebase';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser } from '../redux/slices/Userslice';
 import { useNavigate } from 'react-router-dom';
@@ -18,7 +18,7 @@ const Login = () => {
     const dispatch = useDispatch()
     const navigate=useNavigate()
     const user = useSelector(store => store.userSlice.user)
-     console.log(user);
+    //  console.log(user);
     useEffect(() => {
         let error = (validate(email, password));
         setMailError(error[0])

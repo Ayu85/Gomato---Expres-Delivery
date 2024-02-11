@@ -17,7 +17,7 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const cartItems = useSelector(store => store.cartSlice.items)
-     console.log(auth);
+    //  console.log(auth);
     useEffect(() => {
         handleScroll()
 
@@ -98,7 +98,7 @@ const Header = () => {
                         setShowcatalog(false)
                     }} className='absolute flex flex-col cursor-pointer  text-sm font-semibold   top-9 z-50 left-32 rounded-xl bg-white text-blackish px-5  py-4'>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 ' onClick={() => {
-                            !user ? navigate('/asianfood') : navigate('/loggeduser')
+                            navigate('/asianfood')
                         }} >Shop</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Cart</li>
                         <li className='hover:bg-yellowish transition-all py-2 rounded-xl px-10 '>Checkout</li>
@@ -127,7 +127,7 @@ const Header = () => {
                 <div className='flex items-center gap-2 text-yellowish font-semibold'><PiPhoneCallFill className='text-white' />
                     +91-9005676379</div>
                 <div className='cursor-pointer hover:scale-110 transition-all' onClick={() => {
-                    auth.currentUser===null ? navigate('/user') : navigate('/loggeduser')
+                    user ? navigate('/loggeduser') : navigate('/user')
                 }}><FaUserAlt />
                 </div>
                 <div className='cursor-pointer flex items-center gap-1 hover:scale-110 transition-all' onClick={() => {
