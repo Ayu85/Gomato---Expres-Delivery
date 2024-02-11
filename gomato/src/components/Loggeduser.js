@@ -50,14 +50,17 @@ const Loading = () => {
     </div>
 }
 const Userdetails = () => {
+    const navigate = useNavigate()
     const user = useSelector(store => store.userSlice.user)
     return <div className='flex items-center justify-center bg-blackish h-screen'>
         <div className='bg-[#00000039]  text-white px-24 rounded-lg h-[500px] flex flex-col gap-4 items-center py-5'>
             {/* <h1 className='text-yellowish text-3xl '>Welcome Buddy</h1> */}
             <img src={!user ? lockedlogo : welcomelogo} alt='logo' className='w-72' />
-            <h1 className='text-xl font-semibold'>Email: {user?.currentuser || "Please Log In"}</h1>
-            <button>Take me to Login Page</button>
-        </div>
+            <h1 className='text-xl font-semibold'> {user?.email || "Please Log In"}</h1>
+            {!user && <button onClick={() => {
+                navigate('/user')
+            }} className='bg-yellowish px-3 py-3 rounded-lg text-blackish font-semibold'>Take me to Login Page</button>
+            } </div>
     </div>
 }
 export default Loggeduser
