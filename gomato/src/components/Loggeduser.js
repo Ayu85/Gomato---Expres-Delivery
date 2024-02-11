@@ -3,7 +3,7 @@ import Header from './Header'
 import { getAuth, signOut } from "firebase/auth";
 import { auth } from '../firebase'
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addUser } from '../redux/slices/Userslice';
 import { motion } from 'framer-motion'
 const Loggeduser = () => {
@@ -28,14 +28,7 @@ const Loggeduser = () => {
             <Header />
             {!showData ?
                 <Loading /> :
-                <div>
-                    welcome user
-                    <button onClick={() => {
-                        logout()
-                        dispatch(addUser(null))
-                        navigate('/user')
-                    }}>signout</button>
-                </div>}
+                <Userdetails />}
         </div>
     )
 }
@@ -53,5 +46,13 @@ const Loading = () => {
 
     </div>
 }
-
+const Userdetails = () => {
+    const user = useSelector(store => store.userSlice.user)
+    return <div className='flex items-center justify-center bg-blackish h-screen'>
+        <div className='bg-[#00000039]  text-white px-24 rounded-lg h-[500px] flex flex-col gap-4 items-center py-5'>
+            <h1 className='text-yellowish text-3xl '>Welcome Buddy</h1>
+            <h1>Email: {user.currentuser || "Please Log In"}</h1>
+        </div>
+    </div>
+}
 export default Loggeduser
