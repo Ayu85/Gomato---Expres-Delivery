@@ -5,6 +5,7 @@ import { auth } from '../firebase'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../redux/slices/Userslice';
+import { motion } from 'framer-motion'
 const Loggeduser = () => {
     const [showData, setData] = useState(false)
     useEffect(() => {
@@ -26,7 +27,7 @@ const Loggeduser = () => {
         <div>
             <Header />
             {!showData ?
-                <div>Please wait loading</div> :
+                <Loading /> :
                 <div>
                     welcome user
                     <button onClick={() => {
@@ -40,10 +41,12 @@ const Loggeduser = () => {
 }
 const Loading = () => {
     return <div className='flex flex-col gap-6 items-center justify-center'>
-        <h1>PLEASE WAIT !!! LOGGIN YOU TO THE WORLD OF TASTE</h1>
-        <div className='w-44 h-44 bg-yellowish border-t-2 border-t-ghee rounded-full animate-[spin_linearly_5s] '>
+        <h1 className='text-3xl font-semibold'>PLEASE WAIT !!! LOGGIN YOU IN...TO THE WORLD OF TASTE</h1>
+        <motion.div animate={{ rotate: 360 }}
+         transition={{ duration: 1, repeat: Infinity, ease: "linear", }}
+          className='w-44 aspect-square  border-t-8  bg-yellowish border-t-blackish rounded-full border-white border-8 '>
 
-        </div>
+        </motion.div>
     </div>
 }
 
