@@ -40,11 +40,14 @@ const Loggeduser = () => {
     )
 }
 const Loading = () => {
-    return <div className='flex flex-col gap-6 items-center justify-center'>
-        <h1 className='text-3xl font-semibold'>PLEASE WAIT !!! LOGGIN YOU IN...TO THE WORLD OF TASTE</h1>
+    return <div className='flex flex-col gap-10 items-center justify-center mt-10'>
+        <motion.h1 initial={{ opacity: 0 }}
+            animate={{ opacity: 1}}
+            transition={{ duration: 3, ease: "linear", }}
+            className='text-4xl h-10  font-semibold '>PLEASE WAIT !!! LOGGIN YOU IN...TO THE WORLD OF TASTE</motion.h1>
         <motion.div animate={{ rotate: 360 }}
-         transition={{ duration: 1, repeat: Infinity, ease: "linear", }}
-          className='w-44 aspect-square  border-t-8  bg-yellowish border-t-blackish rounded-full border-white border-8 '>
+            transition={{ duration: 1, repeat: Infinity, ease: "linear", }}
+            className='w-44 aspect-square  border-t-8  bg-yellowish border-t-blackish rounded-full border-white border-8 '>
 
         </motion.div>
     </div>
