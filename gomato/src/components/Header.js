@@ -172,6 +172,11 @@ const Header = () => {
                     </li>
                     <li className='flex items-center cursor-pointer hover:text-yellowish'>Contacts<MdNavigateNext />
                     </li>
+                    <li onClick={() => {
+                        user ? navigate('/loggeduser') : navigate('/user')
+                        dispatch(toogleHamburger())
+                    }} className='flex items-center cursor-pointer hover:text-yellowish'>My Account<MdNavigateNext />
+                    </li>
                 </ul>
             </div>}
         </div>
