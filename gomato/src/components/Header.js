@@ -17,7 +17,7 @@ const Header = () => {
     const [showBlog, setShowblog] = useState(false)
     const showHamburger = useSelector(store => store.Hamburger.isShown)
     const cartItems = useSelector(store => store.cartSlice.items)
-    //  console.log(auth);
+     console.log(auth);
     useEffect(() => {
         handleScroll()
 

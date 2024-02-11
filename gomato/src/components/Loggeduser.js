@@ -47,10 +47,11 @@ const Userdetails = () => {
     const logout = () => {
         signOut(auth).then(() => {
             // Sign-out successful.
-            dispatch(removeUser())
             console.log("sign out")
+            dispatch(removeUser())
         }).catch((error) => {
             // An error happened.
+            console.log('error')
         });
     }
     const user = useSelector(store => store.userSlice.user)
@@ -61,14 +62,15 @@ const Userdetails = () => {
             {user && <img src={userlogo} alt='logo' className='w-24 aspect-square' />}
             <h1 className='text-xl font-semibold'> {user?.email || "Please Log In"}</h1>
             <h1 className='text-sm font-semibold'> {user?.uid || ""}</h1>
-            {user && <button onClick={() => {
-
+            {user && <button onClick={(e) => {
+                e.preventDefault()
+                logout()
                 navigate('/')
 
             }} className='bg-yellowish px-3 py-3 rounded-lg text-blackish font-semibold'>Logout</button>
             }
-            {!user && <button onClick={() => {
-                logout()
+            {!user && <button onClick={(e) => {
+
                 navigate('/user')
             }} className='bg-yellowish px-3 py-3 rounded-lg text-blackish font-semibold'>Take me to Login Page</button>
             } </div>
