@@ -4,7 +4,7 @@ import { getAuth, signOut } from "firebase/auth";
 import { auth } from '../firebase'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addUser } from '../redux/slices/Userslice';
+import { addUser, removeUser } from '../redux/slices/Userslice';
 import { motion } from 'framer-motion'
 import welcomelogo from '../assets/welcome.png'
 import lockedlogo from '../assets/locked.png'
@@ -47,8 +47,8 @@ const Userdetails = () => {
     const logout = () => {
         signOut(auth).then(() => {
             // Sign-out successful.
+            dispatch(removeUser())
             console.log("sign out")
-            dispatch(addUser(null))
         }).catch((error) => {
             // An error happened.
         });

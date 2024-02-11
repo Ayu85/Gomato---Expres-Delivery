@@ -19,7 +19,7 @@ const Products = ({ products }) => {
   //   barStatus ? document.getElementsByTagName("body")[0].style.overflow = 'hidden' : document.getElementsByTagName("body")[0].style.overflow = 'visible'
   // }, [barStatus])
   return (
-    <div className={`flex px-6 relative  pt-12`}  >
+    <div className={`flex px-6 relative  pt-12 bg-white`}  >
       {/* category section */}
       <div className='hidden lg:flex w-[30%]  flex-col gap-3'>
         <div className='bg-[#F2EFE6] w-full mt-10 py-8 px-5 flex relative items-center justify-center  rounded-2xl '>
