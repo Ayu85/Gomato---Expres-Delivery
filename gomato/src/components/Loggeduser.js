@@ -25,7 +25,8 @@ const Loggeduser = () => {
     return (
         <div>
             <Header />
-            {!showData ? <div>Please wait loading</div> :
+            {!showData ?
+                <div>Please wait loading</div> :
                 <div>
                     welcome user
                     <button onClick={() => {
@@ -36,6 +37,14 @@ const Loggeduser = () => {
                 </div>}
         </div>
     )
+}
+const Loading = () => {
+    return <div className='flex flex-col gap-6 items-center justify-center'>
+        <h1>PLEASE WAIT !!! LOGGIN YOU TO THE WORLD OF TASTE</h1>
+        <div className='w-44 h-44 bg-yellowish border-t-2 border-t-ghee rounded-full animate-[spin_linearly_5s] '>
+
+        </div>
+    </div>
 }
 
 export default Loggeduser
