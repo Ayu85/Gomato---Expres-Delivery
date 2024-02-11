@@ -4,7 +4,7 @@ import { FcPhone } from "react-icons/fc";
 import waves from '../assets/waves_white-15.png'
 import validate from '../utils/validate';
 import { auth } from '../firebase';
-import {  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser } from '../redux/slices/Userslice';
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +19,7 @@ const Login = () => {
     const [mailError, setMailError] = useState()
     const [passError, setPassError] = useState()
     const dispatch = useDispatch()
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     const user = useSelector(store => store.userSlice.user)
     //  console.log(user);
     useEffect(() => {
@@ -42,6 +42,7 @@ const Login = () => {
             });
 
     }
+    const [isBtnClicked, setClicked] = useState(false)
     const loginUser = (email, password) => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -79,8 +80,14 @@ const Login = () => {
 
                 <button onClick={(e) => {
                     e.preventDefault();
+                    setClicked(true)
                     loginUser(email, password)
-                }} className='lg:w-96 md:w-96  w-52  bg_slider2 cursor-pointer font-semibold text-lg py-3 rounded-xl pl-3 text-blackish bg-yellowish outline-none flex gap-3 items-center justify-center'>Log In <span className='w-10 aspect-square rounded-full border-t-yellowish border-t-4 border-gray border-4 animate-[spin_linear_1s_infinite]'></span></button>
+                }}
+                    className='lg:w-96 md:w-96 
+                  w-52  bg_slider2 cursor-pointer font-semibold
+                   text-lg py-3 rounded-xl pl-3 text-blackish
+                    bg-yellowish outline-none flex gap-3 items-center
+                     justify-center'>Log In {isBtnClicked && <span className='w-10 aspect-square rounded-full border-t-yellowish border-t-4 border-gray border-4 animate-[spin_linear_1s_infinite]'></span>}</button>
             </form>
             <div className='text-center'>
                 <h1>Not Registered Yet ? <span className='font-semibold cursor-pointer text-yellowish' onClick={() => {
