@@ -56,7 +56,9 @@ const Userdetails = () => {
         <div className='bg-[#00000039]  text-white px-24 rounded-lg h-[500px] flex flex-col gap-4 items-center py-5'>
             {/* <h1 className='text-yellowish text-3xl '>Welcome Buddy</h1> */}
             <img src={!user ? lockedlogo : welcomelogo} alt='logo' className='w-72' />
+           {user&& <img src={userlogo} alt='logo' className='w-24 aspect-square'/>}
             <h1 className='text-xl font-semibold'> {user?.email || "Please Log In"}</h1>
+           
             {!user && <button onClick={() => {
                 navigate('/user')
             }} className='bg-yellowish px-3 py-3 rounded-lg text-blackish font-semibold'>Take me to Login Page</button>
