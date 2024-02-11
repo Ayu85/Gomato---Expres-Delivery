@@ -16,16 +16,8 @@ const Loggeduser = () => {
             setData(true)
         }, 4000)
     }, [])
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
-    const logout = () => {
-        signOut(auth).then(() => {
-            // Sign-out successful.
-            console.log("sign out")
-        }).catch((error) => {
-            // An error happened.
-        });
-    }
+
+
     return (
         <div>
             <Header />
@@ -51,18 +43,35 @@ const Loading = () => {
 }
 const Userdetails = () => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const logout = () => {
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            console.log("sign out")
+            dispatch(addUser(null))
+        }).catch((error) => {
+            // An error happened.
+        });
+    }
     const user = useSelector(store => store.userSlice.user)
     return <div className='flex items-center justify-center bg-blackish h-screen'>
         <div className='bg-[#00000039]  text-white px-24 rounded-lg h-[500px] flex flex-col gap-4 items-center py-5'>
             {/* <h1 className='text-yellowish text-3xl '>Welcome Buddy</h1> */}
             <img src={!user ? lockedlogo : welcomelogo} alt='logo' className='w-72' />
-           {user&& <img src={userlogo} alt='logo' className='w-24 aspect-square'/>}
+            {user && <img src={userlogo} alt='logo' className='w-24 aspect-square' />}
             <h1 className='text-xl font-semibold'> {user?.email || "Please Log In"}</h1>
-           
+            <h1 className='text-sm font-semibold'> {user?.uid || ""}</h1>
+            {user && <button onClick={() => {
+
+                navigate('/')
+
+            }} className='bg-yellowish px-3 py-3 rounded-lg text-blackish font-semibold'>Logout</button>
+            }
             {!user && <button onClick={() => {
+                logout()
                 navigate('/user')
             }} className='bg-yellowish px-3 py-3 rounded-lg text-blackish font-semibold'>Take me to Login Page</button>
             } </div>
-    </div>
+    </div >
 }
 export default Loggeduser
