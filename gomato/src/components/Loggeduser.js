@@ -40,17 +40,17 @@ const Loggeduser = () => {
     )
 }
 const Loading = () => {
-    return <div className='flex flex-col gap-10 items-center justify-center mt-10'>
+    return <div className='flex flex-col gap-20 items-center justify-center pt-10 h-screen bg-blackish'>
         <motion.h1 initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 3, ease: "linear", }}
-            className='text-4xl h-10  font-semibold '>PLEASE WAIT !!! LOGGIN YOU IN...TO THE WORLD OF TASTE</motion.h1>
+            className='text-xl md:text-4xl text-center lg:text-4xl  h-10  font-semibold text-yellowish '>PLEASE WAIT !!! LOGGIN YOU IN...TO THE WORLD OF TASTE</motion.h1>
         <motion.div animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: "linear", }}
-            className='w-44 aspect-square  border-t-8  bg-yellowish border-t-blackish rounded-full border-white border-8 '>
+            className='lg:w-44 md:w-44 w-24 aspect-square  border-t-8   border-t-yellowish rounded-full border-white border-8 '>
 
         </motion.div>
-        
+
     </div>
 }
 
